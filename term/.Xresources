@@ -1,0 +1,91 @@
+!-[General settings]---
+URxvt.termName: rxvt-256color
+URxvt*loginShell: true
+URxvt*geometry: 80x25
+URxvt.saveLines: 2000
+URxvt.urgentOnBell: True
+URxvt.cursorBlink: False
+URxvt.fading: 10
+
+!-[Font Rendering]-----
+Xft.dpi: $template.x.xft_dpi$
+Xft.antialias: true
+Xft.hinting: true
+Xft.autohint: false
+Xft.rgba: rgb
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+!-[Scrollbar]----------
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.scrollBar_floating: false
+URxvt.scrollstyle: rxvt
+
+!-[Fonts]--------------
+!Terminus
+#define termfont	xft:Terminus:medium:pixelsize=14
+#define termfontbold	xft:Terminus:medium:pixelsize=14
+URxvt.font:           termfont
+URxvt.boldFont:       termfontbold
+URxvt.italicFont:     termfont
+URxvt.boldItalicFont: termfontbold
+URxvt.letterSpace: 0
+
+!-[Theme]--------------
+! Jellybeans Terminal Colours
+urxvt.background: #151515
+urxvt.foreground: #ffffff
+! black
+urxvt.color0: #888888
+urxvt.color8: #525252
+! red
+urxvt.color1: #cf6a4c
+urxvt.color9: #ff9d80
+! green
+urxvt.color2: #99ad6a
+urxvt.color10: #c3e6ad
+! yellow
+urxvt.color3: #fad07a
+urxvt.color11: #ffefbf
+! blue
+urxvt.color4: #8197bf
+urxvt.color12: #accaff
+! magenta
+urxvt.color5: #8787af
+urxvt.color13: #c4c4ff
+! cyan
+urxvt.color6: #8fbfdc
+urxvt.color14: #80bfaf
+! white
+urxvt.color7: #888888
+urxvt.color15: #e8e8d3
+
+! Gotham Terminal Colours
+!urxvt.foreground:   #98d1ce
+!urxvt.background:   #0a0f14
+!urxvt.cursorColor:  #98d1ce
+!! black
+!urxvt.color0:       #0a0f14
+!urxvt.color8:       #10151b
+!! red
+!urxvt.color1:       #c33027
+!urxvt.color9:       #d26939
+!! green
+!urxvt.color2:       #26a98b
+!urxvt.color10:      #081f2d
+!! yellow
+!urxvt.color3:       #edb54b
+!urxvt.color11:      #245361
+!! blue
+!urxvt.color4:       #195465
+!urxvt.color12:      #093748
+!! magenta
+!urxvt.color5:       #4e5165
+!urxvt.color13:      #888ba5
+!! cyan
+!urxvt.color6:       #33859d
+!urxvt.color14:      #599caa
+!! white
+!urxvt.color7:       #98d1ce
+!urxvt.color15:      #d3ebe9
