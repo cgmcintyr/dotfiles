@@ -71,7 +71,7 @@ let g:ctrlp_working_path_mode = 0
 
 " Default colorscheme
 set background=dark
-colorscheme wombat256mod
+colorscheme jellybeans
 syntax on
 
 " Default encoding - change default encoding as you want
