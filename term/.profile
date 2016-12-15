@@ -25,3 +25,7 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+if [ -e "$HOME/.aliases" ] ; then
+    source "$HOME/.aliases"
+fi

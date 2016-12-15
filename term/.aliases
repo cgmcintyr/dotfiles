@@ -1,0 +1,8 @@
+# General
+alias nv="nvim"
+
+# Firefox
+alias ff-trello="firefox -new-tab 'http://www.trello.com'"
+alias ff-mole="firefox -new-tab 'https://vle.shef.ac.uk/webapps/login/'"
+alias ff-amazon-jobs="firefox -new-tab 'https://uk-amazon.icims.com/jobs/login?loginOnly=1'"
+alias nv="nvim"

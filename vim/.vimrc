@@ -46,7 +46,7 @@ filetype plugin indent on
 "=============================Plugin Settings================================="
 
 "THE-NERD-TREE
-let g:nerdtree_tabs_open_on_console_startup = 1
+let g:nerdtree_tabs_open_on_console_startup = 0
 let g:nerdtree_tabs_autoclose = 1
 let g:NERDTreeDirArrows = 0
 map <C-u> :NERDTreeTabsToggle<CR>
