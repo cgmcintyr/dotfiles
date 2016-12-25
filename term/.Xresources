@@ -25,7 +25,7 @@ URxvt.scrollstyle: rxvt
 !-[Fonts]--------------
 !Terminus
 #define termfont	xft:Terminus:medium:pixelsize=14
-#define termfontbold	xft:Terminus:medium:pixelsize=14
+#define termfontbold	xft:Terminus:bold:pixelsize=14
 URxvt.font:           termfont
 URxvt.boldFont:       termfontbold
 URxvt.italicFont:     termfont
