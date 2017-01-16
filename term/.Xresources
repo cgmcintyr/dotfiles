@@ -24,13 +24,13 @@ URxvt.scrollstyle: rxvt
 
 !-[Fonts]--------------
 !Terminus
-#define termfont	xft:Terminus:medium:pixelsize=14
-#define termfontbold	xft:Terminus:bold:pixelsize=14
+#define termfont	xft:DejavuSansMono:medium:pixelsize=14
+#define termfontbold	xft:DejavuSansMono:bold:pixelsize=14
 URxvt.font:           termfont
 URxvt.boldFont:       termfontbold
 URxvt.italicFont:     termfont
 URxvt.boldItalicFont: termfontbold
-URxvt.letterSpace: 0
+URxvt.letterSpace: -1
 
 !-[Theme]--------------
 ! Jellybeans Terminal Colours
