@@ -39,6 +39,9 @@ Plug 'tpope/vim-surround'
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
 
+" Ansible support
+Plug 'chase/vim-ansible-yaml'
+
 call plug#end()
 filetype plugin indent on
 
