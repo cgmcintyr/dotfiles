@@ -22,6 +22,12 @@ URxvt.scrollBar_right: false
 URxvt.scrollBar_floating: false
 URxvt.scrollstyle: rxvt
 
+!-[Clipboard]----------
+URxvt.perl-ext-common:        default,xkr-clipboard
+URxvt.iso14755:               false
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Control-Insert:  perl:clipboard:copy<Paste>
+
 !-[Fonts]--------------
 !Terminus
 #define termfont	xft:DejavuSansMono:medium:pixelsize=14
