@@ -26,6 +26,14 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# Add RVM to PATH for scripting
+if [ -d "$HOME/bin" ] ; then
+    export PATH="$PATH:$HOME/.rvm/bin"
+fi
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
 if [ -e "$HOME/.aliases" ] ; then
     source "$HOME/.aliases"
 fi
