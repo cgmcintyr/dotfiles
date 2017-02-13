@@ -111,3 +111,10 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Python virtualenvwrapper
+[ ! -d "$HOME/.virtualenvs" ] && mkdir "$HOME/.virtualenvs"
+export WORKON_HOME="$HOME/.virtualenvs"
+VENV="$(which virtualenvwrapper.sh)"
+[[ ! -z $VENV ]] && source $VENV
+
