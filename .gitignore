@@ -2,3 +2,6 @@
 
 # Ignore installed vim plugins
 plugged/
+
+# Weechat
+sec.conf

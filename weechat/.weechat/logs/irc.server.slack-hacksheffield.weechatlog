@@ -1,0 +1,72 @@
+2017-02-07 09:44:11	--	irc: connecting to server hacksheffield.irc.slack.com/6667 (SSL)...
+2017-02-07 09:44:11	--	gnutls: connected using 512-bit Diffie-Hellman shared secret exchange
+2017-02-07 09:44:11	--	gnutls: receiving 2 certificates
+2017-02-07 09:44:11	--	 - certificate[1] info:
+2017-02-07 09:44:11	--	   - subject `CN=*.irc.slack.com,O=Tiny Speck,L=San Francisco,ST=California,C=US', issuer `CN=GeoTrust SSL CA - G3,O=GeoTrust Inc.,C=US', serial 0x68548878570c7082df92ad607e8c9ce0, RSA key 2048 bits, signed using RSA-SHA256, activated `2015-11-25 00:00:00 UTC', expires `2017-12-02 23:59:59 UTC', key-ID `sha256:853734b7e4b42f5c74fb3b9bca04505cce2d6d140c64a74fcdbb8e3ebd610ca9'
+2017-02-07 09:44:11	--	 - certificate[2] info:
+2017-02-07 09:44:11	--	   - subject `CN=GeoTrust SSL CA - G3,O=GeoTrust Inc.,C=US', issuer `CN=GeoTrust Global CA,O=GeoTrust Inc.,C=US', serial 0x023a6f, RSA key 2048 bits, signed using RSA-SHA256, activated `2013-11-05 21:36:50 UTC', expires `2022-05-20 21:36:50 UTC', key-ID `sha256:3db34256955ab0c271a6cdc8a857cb4d12a45674422eb4e565573992ca6a964c'
+2017-02-07 09:44:11	--	gnutls: peer's certificate is trusted
+2017-02-07 09:44:11	--	irc: connected to hacksheffield.irc.slack.com/6667 (54.164.47.50)
+2017-02-07 09:44:12	--	CTCP requested by slackbot: VERSION
+2017-02-07 09:44:12	--	CTCP reply to slackbot: VERSION WeeChat 1.6 (Oct  6 2016)
+2017-02-07 09:44:12	--	IRC-SLACK gateway
+2017-02-07 09:44:12	--	Welcome to Slack IRC Gateway server cgmcintyre!~cgmcintyre@10.0.163.193
+2017-02-07 09:44:12	--	MAP SILENCE=15 WHOX WALLCHOPS WALLVOICES USERIP CPRIVMSG CNOTICE MODES=6 MAXCHANNELS=100 SAFELIST :are supported by this server
+2017-02-07 09:44:12	--	NICKLEN=32 TOPICLEN=160 AWAYLEN=160 CHANTYPES=# PREFIX=(ov)@+ CHANMODES=b,k,l,rimnpst CASEMAPPING=rfc1459 :are supported by this server
+2017-02-07 09:44:12	--	there are 315 users
+2017-02-07 09:44:12	--	Message of the day
+2017-02-07 09:44:12	--	WELCOME TO SLACK...
+2017-02-07 09:44:12	--	Hi! In addition to the normal Slack channels,
+2017-02-07 09:44:12	--	you can join the following channels:
+2017-02-07 09:44:12	--	#mpdm-matt--danny--chrsintyre-1
+2017-02-07 09:44:12	--	    Group messaging with: @matt @danny @chrsintyre
+2017-02-07 09:44:12	--	#mpdm-danny--cgmcintyre--sanzi--ramsay-1
+2017-02-07 09:44:12	--	    Group messaging with: @danny @cgmcintyre @sanzi @ramsay
+2017-02-07 09:44:12	--	#mpdm-matt--danny--chrsintyre--sanzianachiorescu-1
+2017-02-07 09:44:12	--	    Group messaging with: @matt @danny @chrsintyre @sanzianachiorescu
+2017-02-07 09:44:12	--	#mpdm-danny--cgmcintyre--sanzi-1
+2017-02-07 09:44:12	--	    Group messaging with: @danny @cgmcintyre @sanzi
+2017-02-07 09:44:12	--	#mpdm-matt--cgmcintyre--mholeys-1
+2017-02-07 09:44:12	--	    Group messaging with: @matt @cgmcintyre @mholeys
+2017-02-07 09:44:12	--	#mpdm-matt--danny--cgmcintyre--sanzi--joemac-1
+2017-02-07 09:44:12	--	    Group messaging with: @matt @danny @cgmcintyre @sanzi @joemac
+2017-02-07 09:44:12	--	You may disable this notice by appending '-no_mpdm_greet' to your password token.
+2017-02-07 09:44:12	--	End of MOTD command
+2017-02-07 09:44:12	=!=	irc: cannot create nick "" for channel "#rustled"
+2017-02-07 09:47:00	--	irc: disconnected from server
+2017-02-10 12:01:13	--	irc: connecting to server hacksheffield.irc.slack.com/6667 (SSL)...
+2017-02-10 12:01:13	--	gnutls: connected using 512-bit Diffie-Hellman shared secret exchange
+2017-02-10 12:01:13	--	gnutls: receiving 2 certificates
+2017-02-10 12:01:13	--	 - certificate[1] info:
+2017-02-10 12:01:13	--	   - subject `CN=*.irc.slack.com,O=Tiny Speck,L=San Francisco,ST=California,C=US', issuer `CN=GeoTrust SSL CA - G3,O=GeoTrust Inc.,C=US', serial 0x68548878570c7082df92ad607e8c9ce0, RSA key 2048 bits, signed using RSA-SHA256, activated `2015-11-25 00:00:00 UTC', expires `2017-12-02 23:59:59 UTC', key-ID `sha256:853734b7e4b42f5c74fb3b9bca04505cce2d6d140c64a74fcdbb8e3ebd610ca9'
+2017-02-10 12:01:13	--	 - certificate[2] info:
+2017-02-10 12:01:13	--	   - subject `CN=GeoTrust SSL CA - G3,O=GeoTrust Inc.,C=US', issuer `CN=GeoTrust Global CA,O=GeoTrust Inc.,C=US', serial 0x023a6f, RSA key 2048 bits, signed using RSA-SHA256, activated `2013-11-05 21:36:50 UTC', expires `2022-05-20 21:36:50 UTC', key-ID `sha256:3db34256955ab0c271a6cdc8a857cb4d12a45674422eb4e565573992ca6a964c'
+2017-02-10 12:01:13	--	gnutls: peer's certificate is trusted
+2017-02-10 12:01:13	--	irc: connected to hacksheffield.irc.slack.com/6667 (52.71.229.167)
+2017-02-10 12:01:13	--	CTCP requested by slackbot: VERSION
+2017-02-10 12:01:13	--	CTCP reply to slackbot: VERSION WeeChat 1.6 (Oct  6 2016)
+2017-02-10 12:01:13	--	IRC-SLACK gateway
+2017-02-10 12:01:14	--	Welcome to Slack IRC Gateway server cgmcintyre!~cgmcintyre@10.0.104.249
+2017-02-10 12:01:14	--	MAP SILENCE=15 WHOX WALLCHOPS WALLVOICES USERIP CPRIVMSG CNOTICE MODES=6 MAXCHANNELS=100 SAFELIST :are supported by this server
+2017-02-10 12:01:14	--	NICKLEN=32 TOPICLEN=160 AWAYLEN=160 CHANTYPES=# PREFIX=(ov)@+ CHANMODES=b,k,l,rimnpst CASEMAPPING=rfc1459 :are supported by this server
+2017-02-10 12:01:14	--	there are 315 users
+2017-02-10 12:01:14	--	Message of the day
+2017-02-10 12:01:14	--	WELCOME TO SLACK...
+2017-02-10 12:01:14	--	Hi! In addition to the normal Slack channels,
+2017-02-10 12:01:14	--	you can join the following channels:
+2017-02-10 12:01:14	--	#mpdm-matt--danny--chrsintyre-1
+2017-02-10 12:01:14	--	    Group messaging with: @matt @danny @chrsintyre
+2017-02-10 12:01:14	--	#mpdm-danny--cgmcintyre--sanzi--ramsay-1
+2017-02-10 12:01:14	--	    Group messaging with: @danny @cgmcintyre @sanzi @ramsay
+2017-02-10 12:01:14	--	#mpdm-matt--danny--chrsintyre--sanzianachiorescu-1
+2017-02-10 12:01:14	--	    Group messaging with: @matt @danny @chrsintyre @sanzianachiorescu
+2017-02-10 12:01:14	--	#mpdm-danny--cgmcintyre--sanzi-1
+2017-02-10 12:01:14	--	    Group messaging with: @danny @cgmcintyre @sanzi
+2017-02-10 12:01:14	--	#mpdm-matt--cgmcintyre--mholeys-1
+2017-02-10 12:01:14	--	    Group messaging with: @matt @cgmcintyre @mholeys
+2017-02-10 12:01:14	--	#mpdm-matt--danny--cgmcintyre--sanzi--joemac-1
+2017-02-10 12:01:14	--	    Group messaging with: @matt @danny @cgmcintyre @sanzi @joemac
+2017-02-10 12:01:14	--	You may disable this notice by appending '-no_mpdm_greet' to your password token.
+2017-02-10 12:01:14	--	End of MOTD command
+2017-02-10 12:01:14	=!=	irc: cannot create nick "" for channel "#rustled"
+2017-02-10 12:02:46	--	irc: disconnected from server

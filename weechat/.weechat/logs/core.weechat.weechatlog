@@ -1,0 +1,484 @@
+2017-01-04 16:16:21		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-01-04 16:16:31	=!=	You can not write text in this buffer
+2017-01-04 16:16:32	=!=	You can not write text in this buffer
+2017-01-04 16:16:33	=!=	Too few arguments for command "/query" (help on command: /help query)
+2017-01-04 16:16:37		[core]
+2017-01-04 16:16:37		  away     buffer   command  debug    filter   history  key      mouse    plugin   proxy    reload   save     set      upgrade  version  window 
+2017-01-04 16:16:37		  bar      color    cursor   eval     help     input    layout   mute     print    quit     repeat   secure   unset    uptime   wait   
+2017-01-04 16:16:37		[aspell]
+2017-01-04 16:16:37		  aspell
+2017-01-04 16:16:37		[javascript]
+2017-01-04 16:16:37		  javascript
+2017-01-04 16:16:37		[script]
+2017-01-04 16:16:37		  script
+2017-01-04 16:16:37		[ruby]
+2017-01-04 16:16:37		  ruby
+2017-01-04 16:16:37		[perl]
+2017-01-04 16:16:37		  perl
+2017-01-04 16:16:37		[xfer]
+2017-01-04 16:16:37		  me  xfer
+2017-01-04 16:16:37		[tcl]
+2017-01-04 16:16:37		  tcl
+2017-01-04 16:16:37		[charset]
+2017-01-04 16:16:38		  charset
+2017-01-04 16:16:38		[logger]
+2017-01-04 16:16:38		  logger
+2017-01-04 16:16:38		[alias]
+2017-01-04 16:16:38		  AAWAY    AME      ANICK    BYE      CHAT     CLOSE    IG       K        LEAVE    MSGBUF   N        REDRAW   SIGNOFF  UB       V        WC       WII    
+2017-01-04 16:16:38		  alias    AMSG     BEEP     C        CL       EXIT     J        KB       M        MUB      Q        SAY      T        UMODE    W        WI       WW     
+2017-01-04 16:16:38		[python]
+2017-01-04 16:16:38		  python
+2017-01-04 16:16:38		[irc]
+2017-01-04 16:16:38		  admin       cap         dehalfop    halfop      join        list        motd        notify      pong        rehash      sanick      servlist    time        userhost    wallops   
+2017-01-04 16:16:38		  allchan     connect     deop        ignore      kick        lusers      msg         op          query       remove      sapart      squery      topic       users       who       
+2017-01-04 16:16:38		  allpv       ctcp        devoice     info        kickban     map         names       oper        quiet       restart     saquit      squit       trace       version     whois     
+2017-01-04 16:16:38		  allserv     cycle       die         invite      kill        me          nick        part        quote       sajoin      server      stats       unban       voice       whowas    
+2017-01-04 16:16:38		  ban         dcc         disconnect  ison        links       mode        notice      ping        reconnect   samode      service     summon      unquiet     wallchops 
+2017-01-04 16:16:38		[fifo]
+2017-01-04 16:16:38		  fifo
+2017-01-04 16:16:38		[relay]
+2017-01-04 16:16:38		  relay
+2017-01-04 16:16:38		[trigger]
+2017-01-04 16:16:38		  trigger
+2017-01-04 16:16:38		[guile]
+2017-01-04 16:16:38		  guile
+2017-01-04 16:16:38		[exec]
+2017-01-04 16:16:38		  exec
+2017-01-04 16:16:38		[lua]
+2017-01-04 16:16:38		  lua
+2017-01-04 16:16:42	=!=	No help available, "|" is not a command or an option
+2017-01-04 16:16:50	=!=	You can not write text in this buffer
+2017-01-04 16:17:01		fifo: pipe closed
+2017-01-16 12:11:09		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-01-16 12:11:12		Plugins loaded:
+2017-01-16 12:11:12		  aspell: Spell checker for input (with Aspell)
+2017-01-16 12:11:12		  javascript: Support of javascript scripts
+2017-01-16 12:11:12		  script: Scripts manager
+2017-01-16 12:11:12		  ruby: Support of ruby scripts
+2017-01-16 12:11:12		  perl: Support of perl scripts
+2017-01-16 12:11:12		  xfer: DCC file transfer and direct chat
+2017-01-16 12:11:12		  tcl: Support of tcl scripts
+2017-01-16 12:11:12		  charset: Charset conversions
+2017-01-16 12:11:12		  logger: Log buffers to files
+2017-01-16 12:11:12		  alias: Alias commands
+2017-01-16 12:11:12		  python: Support of python scripts
+2017-01-16 12:11:12		  irc: IRC (Internet Relay Chat) protocol
+2017-01-16 12:11:12		  fifo: FIFO pipe for remote control
+2017-01-16 12:11:12		  relay: Relay WeeChat data to remote application (irc/weechat protocols)
+2017-01-16 12:11:12		  trigger: Text replacement and command execution on events triggered by WeeChat/plugins
+2017-01-16 12:11:12		  guile: Support of scheme scripts (with Guile)
+2017-01-16 12:11:12		  exec: Execution of external commands in WeeChat
+2017-01-16 12:11:12		  lua: Support of lua scripts
+2017-01-16 12:11:27	=!=	You can not write text in this buffer
+2017-01-16 12:11:30	=!=	Error: unknown command "/qui" (type /help for help)
+2017-01-16 12:11:32		fifo: pipe closed
+2017-02-06 15:23:06		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-02-06 15:24:11	=!=	You can not write text in this buffer
+2017-02-06 15:24:12		fifo: pipe closed
+2017-02-07 09:28:54		python: stdout/stderr: Traceback (most recent call last):
+2017-02-07 09:28:54		python: stdout/stderr:   File "/home/cgmcintyre/.weechat/python/autoload/wee_slack.py", line 19, in <module>
+2017-02-07 09:28:54		python: stdout/stderr:     from websocket import create_connection, WebSocketConnectionClosedException
+2017-02-07 09:28:54		python: stdout/stderr: ImportError: No module named websocket
+2017-02-07 09:28:54	=!=	python: unable to parse file "/home/cgmcintyre/.weechat/python/autoload/wee_slack.py"
+2017-02-07 09:28:54		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-02-07 09:38:54	=!=	You can not write text in this buffer
+2017-02-07 09:38:59	=!=	You can not write text in this buffer
+2017-02-07 09:39:00		fifo: pipe closed
+2017-02-07 09:39:02		python: stdout/stderr: Traceback (most recent call last):
+2017-02-07 09:39:02		python: stdout/stderr:   File "/home/cgmcintyre/.weechat/python/autoload/wee_slack.py", line 19, in <module>
+2017-02-07 09:39:02		python: stdout/stderr:     from websocket import create_connection, WebSocketConnectionClosedException
+2017-02-07 09:39:02		python: stdout/stderr: ImportError: No module named websocket
+2017-02-07 09:39:02	=!=	python: unable to parse file "/home/cgmcintyre/.weechat/python/autoload/wee_slack.py"
+2017-02-07 09:39:02		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-02-07 09:43:37		irc: server slack-HackSheffield added
+2017-02-07 09:44:51		Buffers list:
+2017-02-07 09:44:51		  [1] core.weechat (notify: all)
+2017-02-07 09:44:51		  [1] irc.server.slack-HackSheffield (notify: all)
+2017-02-07 09:44:51		  [2] irc.slack-HackSheffield.#organiser-magic-cloud (notify: all)
+2017-02-07 09:44:51		  [3] irc.slack-HackSheffield.#organisers (notify: all)
+2017-02-07 09:44:51		  [4] irc.slack-HackSheffield.#organiser-vendors (notify: all)
+2017-02-07 09:44:51		  [5] irc.slack-HackSheffield.#organiser-banter (notify: all)
+2017-02-07 09:44:51		  [6] irc.slack-HackSheffield.#committee (notify: all)
+2017-02-07 09:44:51		  [7] irc.slack-HackSheffield.#society (notify: all)
+2017-02-07 09:44:51		  [8] irc.slack-HackSheffield.#hacktheholidays (notify: all)
+2017-02-07 09:44:51		  [9] irc.slack-HackSheffield.#monzo-fanclub (notify: all)
+2017-02-07 09:44:51		  [10] irc.slack-HackSheffield.#organiser-publicity (notify: all)
+2017-02-07 09:44:51		  [11] irc.slack-HackSheffield.#hackupc (notify: all)
+2017-02-07 09:44:51		  [12] irc.slack-HackSheffield.#rustled (notify: all)
+2017-02-07 09:44:51		  [13] irc.slack-HackSheffield.#hacknotts (notify: all)
+2017-02-07 09:44:51		  [14] irc.slack-HackSheffield.#general (notify: all)
+2017-02-07 09:44:51		  [15] irc.slack-HackSheffield.#uni-work-hacking (notify: all)
+2017-02-07 09:44:51		  [16] irc.slack-HackSheffield.#joab-hate-crew (notify: all)
+2017-02-07 09:44:51		  [17] irc.slack-HackSheffield.#organiser-sponsorship (notify: all)
+2017-02-07 09:44:51		  [18] irc.slack-HackSheffield.#organiser-finance (notify: all)
+2017-02-07 09:44:52		Windows list:
+2017-02-07 09:44:52		[1] (0:0;199x54) 
+2017-02-07 09:46:30		Buffers list:
+2017-02-07 09:46:30		  [1] core.weechat (notify: all)
+2017-02-07 09:46:30		  [1] irc.server.slack-HackSheffield (notify: all)
+2017-02-07 09:46:30		  [2] irc.slack-HackSheffield.#organiser-magic-cloud (notify: all)
+2017-02-07 09:46:30		  [3] irc.slack-HackSheffield.#organisers (notify: all)
+2017-02-07 09:46:30		  [4] irc.slack-HackSheffield.#organiser-vendors (notify: all)
+2017-02-07 09:46:30		  [5] irc.slack-HackSheffield.#organiser-banter (notify: all)
+2017-02-07 09:46:30		  [6] irc.slack-HackSheffield.#committee (notify: all)
+2017-02-07 09:46:30		  [7] irc.slack-HackSheffield.#society (notify: all)
+2017-02-07 09:46:30		  [8] irc.slack-HackSheffield.#hacktheholidays (notify: all)
+2017-02-07 09:46:30		  [9] irc.slack-HackSheffield.#monzo-fanclub (notify: all)
+2017-02-07 09:46:30		  [10] irc.slack-HackSheffield.#organiser-publicity (notify: all)
+2017-02-07 09:46:30		  [11] irc.slack-HackSheffield.#hackupc (notify: all)
+2017-02-07 09:46:30		  [12] irc.slack-HackSheffield.#rustled (notify: all)
+2017-02-07 09:46:30		  [13] irc.slack-HackSheffield.#hacknotts (notify: all)
+2017-02-07 09:46:30		  [14] irc.slack-HackSheffield.#general (notify: all)
+2017-02-07 09:46:30		  [15] irc.slack-HackSheffield.#uni-work-hacking (notify: all)
+2017-02-07 09:46:30		  [16] irc.slack-HackSheffield.#joab-hate-crew (notify: all)
+2017-02-07 09:46:30		  [17] irc.slack-HackSheffield.#organiser-sponsorship (notify: all)
+2017-02-07 09:46:30		  [18] irc.slack-HackSheffield.#organiser-finance (notify: all)
+2017-02-07 09:46:33	=!=	Error with command "/buffer help" (help on command: /help buffer)
+2017-02-07 09:47:00		fifo: pipe closed
+2017-02-10 12:01:13		python: stdout/stderr: Traceback (most recent call last):
+2017-02-10 12:01:13		python: stdout/stderr:   File "/home/cgmcintyre/.weechat/python/autoload/wee_slack.py", line 19, in <module>
+2017-02-10 12:01:13		python: stdout/stderr:     from websocket import create_connection, WebSocketConnectionClosedException
+2017-02-10 12:01:13		python: stdout/stderr: ImportError: No module named websocket
+2017-02-10 12:01:13	=!=	python: unable to parse file "/home/cgmcintyre/.weechat/python/autoload/wee_slack.py"
+2017-02-10 12:01:13		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-02-10 12:02:49		All servers:
+2017-02-10 12:02:49		   slack-HackSheffield
+2017-02-10 12:03:01		irc: server slack-HackSheffield has been deleted
+2017-02-10 12:03:11	=!=	Error: unknown command "/slack" (type /help for help)
+2017-02-10 12:03:14		fifo: pipe closed
+2017-02-10 12:07:19		python: stdout/stderr: Traceback (most recent call last):
+2017-02-10 12:07:19		python: stdout/stderr:   File "/home/cgmcintyre/.weechat/python/autoload/wee_slack.py", line 19, in <module>
+2017-02-10 12:07:19		python: stdout/stderr:     from websocket import create_connection, WebSocketConnectionClosedException
+2017-02-10 12:07:19		python: stdout/stderr: ImportError: No module named websocket
+2017-02-10 12:07:19	=!=	python: unable to parse file "/home/cgmcintyre/.weechat/python/autoload/wee_slack.py"
+2017-02-10 12:07:19		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-02-10 12:07:21	=!=	Error: unknown command "/slac" (type /help for help)
+2017-02-10 12:09:36		Passphrase added
+2017-02-10 12:10:53		Secured data "slack_token_HackSheffield" set
+2017-02-10 12:10:53		Options saved to sec.conf
+2017-02-10 12:11:34		python: loading script "/home/cgmcintyre/.weechat/python/autoload/wee_slack.py"
+2017-02-10 12:11:34		python: stdout/stderr: Traceback (most recent call last):
+2017-02-10 12:11:34		python: stdout/stderr:   File "/home/cgmcintyre/.weechat/python/autoload/wee_slack.py", line 19, in <module>
+2017-02-10 12:11:34		python: stdout/stderr:     from websocket import create_connection, WebSocketConnectionClosedException
+2017-02-10 12:11:34		python: stdout/stderr: ImportError: No module named websocket
+2017-02-10 12:11:34	=!=	python: unable to parse file "/home/cgmcintyre/.weechat/python/autoload/wee_slack.py"
+2017-02-10 12:11:46		fifo: pipe closed
+2017-02-10 12:24:34		cache file not found
+2017-02-10 12:24:34		python scripts loaded: slack_extension
+2017-02-10 12:24:34		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-02-10 12:24:34		!! slack.com login error: invalid_auth
+2017-02-10 12:24:34		 The problematic token starts with INSERT VAL
+2017-02-10 12:24:34		 Please check your API token with
+2017-02-10 12:24:34		 "/set plugins.var.python.slack_extension.slack_api_token (token)"
+2017-02-10 12:25:39		Option changed: plugins.var.python.slack_extension.slack_api_token = "${sec.data.slack_token_HackSheffield}"
+2017-02-10 12:25:47		Options saved to sec.conf
+2017-02-10 12:25:47		Options saved to weechat.conf
+2017-02-10 12:25:47		Options saved to plugins.conf
+2017-02-10 12:25:47		Options saved to charset.conf
+2017-02-10 12:25:47		Options saved to logger.conf
+2017-02-10 12:25:47		Options saved to exec.conf
+2017-02-10 12:25:47		Options saved to trigger.conf
+2017-02-10 12:25:47		Options saved to aspell.conf
+2017-02-10 12:25:47		Options saved to alias.conf
+2017-02-10 12:25:47		Options saved to xfer.conf
+2017-02-10 12:25:47		Options saved to irc.conf
+2017-02-10 12:25:47		Options saved to relay.conf
+2017-02-10 12:25:47		Options saved to script.conf
+2017-02-10 12:25:51		python: unloading script "slack_extension"
+2017-02-10 12:25:51		python: loading script "/home/cgmcintyre/.weechat/python/autoload/wee_slack.py"
+2017-02-10 12:25:51		python: registered script "slack_extension", version 0.99.9 (Extends weechat for typing notification/search/etc on slack.com)
+2017-02-10 12:25:51		slack: DEBUG: Loading messages from cache.
+2017-02-10 12:25:51		slack: DEBUG: Completed loading messages from cache.
+2017-02-10 12:26:07		This command must be used in a slack buffer
+2017-02-10 12:26:11		Command not found: 
+2017-02-10 12:26:18		Buffers list:
+2017-02-10 12:26:18		  [1] core.weechat (notify: all)
+2017-02-10 12:26:18		  [1] python.hacksheffield.slack.com (notify: all)
+2017-02-10 12:26:18		  [2] python.hacksheffield.slack.com.#general (notify: all)
+2017-02-10 12:26:18		  [3] python.hacksheffield.slack.com.#hacknotts (notify: all)
+2017-02-10 12:26:18		  [4] python.hacksheffield.slack.com.#hacktheholidays (notify: all)
+2017-02-10 12:26:18		  [5] python.hacksheffield.slack.com.#hackupc (notify: all)
+2017-02-10 12:26:18		  [6] python.hacksheffield.slack.com.#monzo-fanclub (notify: all)
+2017-02-10 12:26:18		  [7] python.hacksheffield.slack.com.#rustled (notify: all)
+2017-02-10 12:26:18		  [8] python.hacksheffield.slack.com.#society (notify: all)
+2017-02-10 12:26:18		  [9] python.hacksheffield.slack.com.#committee (notify: all)
+2017-02-10 12:26:18		  [10] python.hacksheffield.slack.com.#organiser-finance (notify: all)
+2017-02-10 12:26:18		  [11] python.hacksheffield.slack.com.#joab-hate-crew (notify: all)
+2017-02-10 12:26:18		  [12] python.hacksheffield.slack.com.#danny|cgmcintyre|sanzi (notify: all)
+2017-02-10 12:26:18		  [13] python.hacksheffield.slack.com.#organiser-sponsorship (notify: all)
+2017-02-10 12:26:18		  [14] python.hacksheffield.slack.com.#organiser-publicity (notify: all)
+2017-02-10 12:26:18		  [15] python.hacksheffield.slack.com.#organiser-magic-cloud (notify: all)
+2017-02-10 12:26:18		  [16] python.hacksheffield.slack.com.#organiser-vendors (notify: all)
+2017-02-10 12:26:18		  [17] python.hacksheffield.slack.com.#uni-work-hacking (notify: all)
+2017-02-10 12:26:18		  [18] python.hacksheffield.slack.com.#organisers (notify: all)
+2017-02-10 12:26:18		  [19] python.hacksheffield.slack.com.#organiser-banter (notify: all)
+2017-02-10 12:26:18		  [20] python.hacksheffield.slack.com.slackbot (notify: all)
+2017-02-10 12:26:18		  [21] python.hacksheffield.slack.com.matt (notify: all)
+2017-02-10 12:26:18		  [22] python.hacksheffield.slack.com.danny (notify: all)
+2017-02-10 12:26:18		  [23] python.hacksheffield.slack.com.jack (notify: all)
+2017-02-10 12:26:18		  [24] python.hacksheffield.slack.com.cgmcintyre (notify: all)
+2017-02-10 12:26:18		  [25] python.hacksheffield.slack.com.sanzi (notify: all)
+2017-02-10 12:26:18		  [26] python.hacksheffield.slack.com.jacob (notify: all)
+2017-02-10 12:26:18		  [27] python.hacksheffield.slack.com.joemac (notify: all)
+2017-02-10 12:26:18		  [28] python.hacksheffield.slack.com.luana (notify: all)
+2017-02-10 12:26:18		  [29] python.hacksheffield.slack.com.gregives (notify: all)
+2017-02-10 12:26:50		Buffers list:
+2017-02-10 12:26:50		  [1] core.weechat (notify: all)
+2017-02-10 12:26:50		  [1] python.hacksheffield.slack.com (notify: all)
+2017-02-10 12:26:50		  [2] python.hacksheffield.slack.com.#general (notify: all)
+2017-02-10 12:26:50		  [3] python.hacksheffield.slack.com.#hacknotts (notify: all)
+2017-02-10 12:26:50		  [4] python.hacksheffield.slack.com.#hacktheholidays (notify: all)
+2017-02-10 12:26:50		  [5] python.hacksheffield.slack.com.#hackupc (notify: all)
+2017-02-10 12:26:50		  [6] python.hacksheffield.slack.com.#monzo-fanclub (notify: all)
+2017-02-10 12:26:50		  [7] python.hacksheffield.slack.com.#rustled (notify: all)
+2017-02-10 12:26:50		  [8] python.hacksheffield.slack.com.#society (notify: all)
+2017-02-10 12:26:50		  [9] python.hacksheffield.slack.com.#committee (notify: all)
+2017-02-10 12:26:50		  [10] python.hacksheffield.slack.com.#organiser-finance (notify: all)
+2017-02-10 12:26:50		  [11] python.hacksheffield.slack.com.#joab-hate-crew (notify: all)
+2017-02-10 12:26:50		  [12] python.hacksheffield.slack.com.#danny|cgmcintyre|sanzi (notify: all)
+2017-02-10 12:26:50		  [13] python.hacksheffield.slack.com.#organiser-sponsorship (notify: all)
+2017-02-10 12:26:50		  [14] python.hacksheffield.slack.com.#organiser-publicity (notify: all)
+2017-02-10 12:26:50		  [15] python.hacksheffield.slack.com.#organiser-magic-cloud (notify: all)
+2017-02-10 12:26:50		  [16] python.hacksheffield.slack.com.#organiser-vendors (notify: all)
+2017-02-10 12:26:50		  [17] python.hacksheffield.slack.com.#uni-work-hacking (notify: all)
+2017-02-10 12:26:50		  [18] python.hacksheffield.slack.com.#organisers (notify: all)
+2017-02-10 12:26:50		  [19] python.hacksheffield.slack.com.#organiser-banter (notify: all)
+2017-02-10 12:26:50		  [20] python.hacksheffield.slack.com.slackbot (notify: all)
+2017-02-10 12:26:50		  [21] python.hacksheffield.slack.com.matt (notify: all)
+2017-02-10 12:26:50		  [22] python.hacksheffield.slack.com.danny (notify: all)
+2017-02-10 12:26:50		  [23] python.hacksheffield.slack.com.jack (notify: all)
+2017-02-10 12:26:50		  [24] python.hacksheffield.slack.com.cgmcintyre (notify: all)
+2017-02-10 12:26:50		  [25] python.hacksheffield.slack.com.sanzi (notify: all)
+2017-02-10 12:26:50		  [26] python.hacksheffield.slack.com.jacob (notify: all)
+2017-02-10 12:26:50		  [27] python.hacksheffield.slack.com.joemac (notify: all)
+2017-02-10 12:26:50		  [28] python.hacksheffield.slack.com.luana (notify: all)
+2017-02-10 12:26:50		  [29] python.hacksheffield.slack.com.gregives (notify: all)
+2017-02-10 12:26:53	=!=	Error: unknown command "/buffers" (type /help for help)
+2017-02-10 12:26:59		Command not found: 
+2017-02-10 12:28:01	=!=	Error with command "/buffer | grep" (help on command: /help buffer)
+2017-02-10 12:29:07		This command must be used in a slack buffer
+2017-02-10 12:29:40	=!=	python: wrong arguments for function "config_set_plugin" (script: slack_extension)
+2017-02-10 12:29:40		python: stdout/stderr: TypeError: argument 2 must be string, not None
+2017-02-10 12:29:40	=!=	python: error in function "slack_command_cb"
+2017-02-10 12:30:01	=!=	You can not write text in this buffer
+2017-02-10 12:30:03	=!=	Error: unknown command "/clear" (type /help for help)
+2017-02-10 12:30:08	=!=	You can not write text in this buffer
+2017-02-10 12:30:10		[core]
+2017-02-10 12:30:10		  away     buffer   command  debug    filter   history  key      mouse    plugin   proxy    reload   save     set      upgrade  version  window 
+2017-02-10 12:30:10		  bar      color    cursor   eval     help     input    layout   mute     print    quit     repeat   secure   unset    uptime   wait   
+2017-02-10 12:30:10		[aspell]
+2017-02-10 12:30:10		  aspell
+2017-02-10 12:30:10		[javascript]
+2017-02-10 12:30:10		  javascript
+2017-02-10 12:30:10		[script]
+2017-02-10 12:30:10		  script
+2017-02-10 12:30:10		[ruby]
+2017-02-10 12:30:10		  ruby
+2017-02-10 12:30:10		[perl]
+2017-02-10 12:30:10		  perl
+2017-02-10 12:30:10		[xfer]
+2017-02-10 12:30:10		  me  xfer
+2017-02-10 12:30:10		[tcl]
+2017-02-10 12:30:10		  tcl
+2017-02-10 12:30:10		[charset]
+2017-02-10 12:30:10		  charset
+2017-02-10 12:30:10		[logger]
+2017-02-10 12:30:10		  logger
+2017-02-10 12:30:10		[alias]
+2017-02-10 12:30:10		  AAWAY    AME      ANICK    BYE      CHAT     CLOSE    IG       K        LEAVE    MSGBUF   N        REDRAW   SIGNOFF  UB       V        WC       WII    
+2017-02-10 12:30:10		  alias    AMSG     BEEP     C        CL       EXIT     J        KB       M        MUB      Q        SAY      T        UMODE    W        WI       WW     
+2017-02-10 12:30:10		[python]
+2017-02-10 12:30:10		  me  python  slack
+2017-02-10 12:30:10		[irc]
+2017-02-10 12:30:10		  admin       connect     devoice     invite      links       motd        op          quiet       sajoin      service     time        users       whois     
+2017-02-10 12:30:10		  allchan     ctcp        die         ison        list        msg         oper        quote       samode      servlist    topic       version     whowas    
+2017-02-10 12:30:10		  allpv       cycle       disconnect  join        lusers      names       part        reconnect   sanick      squery      trace       voice     
+2017-02-10 12:30:10		  allserv     dcc         halfop      kick        map         nick        ping        rehash      sapart      squit       unban       wallchops 
+2017-02-10 12:30:10		  ban         dehalfop    ignore      kickban     me          notice      pong        remove      saquit      stats       unquiet     wallops   
+2017-02-10 12:30:10		  cap         deop        info        kill        mode        notify      query       restart     server      summon      userhost    who       
+2017-02-10 12:30:10		[fifo]
+2017-02-10 12:30:10		  fifo
+2017-02-10 12:30:10		[relay]
+2017-02-10 12:30:10		  relay
+2017-02-10 12:30:10		[trigger]
+2017-02-10 12:30:10		  trigger
+2017-02-10 12:30:10		[guile]
+2017-02-10 12:30:10		  guile
+2017-02-10 12:30:10		[exec]
+2017-02-10 12:30:10		  exec
+2017-02-10 12:30:10		[lua]
+2017-02-10 12:30:10		  lua
+2017-02-10 12:30:46		nodistractions
+2017-02-10 12:30:46		No help text
+2017-02-10 12:30:46		changetoken
+2017-02-10 12:30:46		No help text
+2017-02-10 12:30:46		help
+2017-02-10 12:30:46		No help text
+2017-02-10 12:30:46		back
+2017-02-10 12:30:46		Sets your status as 'back'
+2017-02-10 12:30:46		    /slack back
+2017-02-10 12:30:46		channels
+2017-02-10 12:30:46		List all the channels for the slack instance (name, id, active)
+2017-02-10 12:30:46		    /slack channels
+2017-02-10 12:30:46		distracting
+2017-02-10 12:30:46		No help text
+2017-02-10 12:30:46		printvar
+2017-02-10 12:30:46		No help text
+2017-02-10 12:30:46		away
+2017-02-10 12:30:46		Sets your status as 'away'
+2017-02-10 12:30:46		    /slack away
+2017-02-10 12:30:46		openweb
+2017-02-10 12:30:46		No help text
+2017-02-10 12:30:46		nick
+2017-02-10 12:30:46		No help text
+2017-02-10 12:30:46		slash
+2017-02-10 12:30:46		Support for custom slack commands
+2017-02-10 12:30:46		    /slack slash /customcommand arg1 arg2 arg3
+2017-02-10 12:30:46		test
+2017-02-10 12:30:46		No help text
+2017-02-10 12:30:46		users
+2017-02-10 12:30:46		List all the users for the slack instance (name, id, away)
+2017-02-10 12:30:46		    /slack users
+2017-02-10 12:30:46		setallreadmarkers
+2017-02-10 12:30:46		Sets the read marker for all channels
+2017-02-10 12:30:46		    /slack setallreadmarkers
+2017-02-10 12:30:46		markread
+2017-02-10 12:30:46		Marks current channel as read
+2017-02-10 12:30:46		    /slack markread
+2017-02-10 12:30:46		neveraway
+2017-02-10 12:30:46		No help text
+2017-02-10 12:30:46		topic
+2017-02-10 12:30:46		Change the topic of a channel
+2017-02-10 12:30:46		    /slack topic [<channel>] [<topic>|-delete]
+2017-02-10 12:30:46		search
+2017-02-10 12:30:46		No help text
+2017-02-10 12:30:46		join
+2017-02-10 12:30:46		Join the specified channel
+2017-02-10 12:30:46		    /slack join [channel]
+2017-02-10 12:30:46		flushcache
+2017-02-10 12:30:46		No help text
+2017-02-10 12:30:46		register
+2017-02-10 12:30:46		No help text
+2017-02-10 12:30:46		upload
+2017-02-10 12:30:46		Uploads a file to the current buffer
+2017-02-10 12:30:46		    /slack upload [file_path]
+2017-02-10 12:30:46		p
+2017-02-10 12:30:46		No help text
+2017-02-10 12:30:46		cachenow
+2017-02-10 12:30:46		No help text
+2017-02-10 12:30:46		debug
+2017-02-10 12:30:46		No help text
+2017-02-10 12:30:46		debugstring
+2017-02-10 12:30:46		No help text
+2017-02-10 12:30:46		talk
+2017-02-10 12:30:46		Open a chat with the specified user
+2017-02-10 12:30:46		    /slack talk [user]
+2017-02-10 12:40:00		Option changed: weechat.bar.nicklist.size = 15  (default: 0)
+2017-02-10 12:40:43	=!=	Error: option "weechat.bar.buffers.size" not found
+2017-02-10 12:43:03		script: downloading list of scripts...
+2017-02-10 12:43:04		script: 331 scripts for WeeChat 1.6
+2017-02-10 12:43:04		perl: loading script "/home/cgmcintyre/.weechat/perl/buffers.pl"
+2017-02-10 12:43:04		perl: registered script "buffers", version 5.4 (Sidebar with list of buffers)
+2017-02-10 12:43:04		New key binding (context "mouse"): @bar(buffers):ctrl-wheeldown => hsignal:buffers_mouse
+2017-02-10 12:43:04		New key binding (context "mouse"): @bar(buffers):ctrl-wheelup => hsignal:buffers_mouse
+2017-02-10 12:43:04		New key binding (context "mouse"): @item(buffers):button2* => hsignal:buffers_mouse
+2017-02-10 12:43:04		New key binding (context "mouse"): @item(buffers):button1* => hsignal:buffers_mouse
+2017-02-10 12:43:34		Option changed: buffers.color.current_fg = white  (default: lightcyan)
+2017-02-10 12:43:44		Option changed: buffers.color.current_bg = blue  (default: red)
+2017-02-10 12:43:58		Option changed: buffers.color.current_bg = default  (default: red)
+2017-02-10 12:44:06		Option changed: buffers.color.current_fg = red  (default: lightcyan)
+2017-02-10 12:44:10		Option changed: buffers.color.current_fg = green  (default: lightcyan)
+2017-02-10 12:44:15		Option changed: buffers.color.current_fg = blue  (default: lightcyan)
+2017-02-10 12:44:18		Option changed: buffers.color.current_fg = white  (default: lightcyan)
+2017-02-10 12:44:30		Option changed: buffers.color.current_bg = blue  (default: red)
+2017-02-10 12:54:16	=!=	python: function "quit_notification_cb" must return a valid value
+2017-02-10 12:54:16	=!=	python: error in function "quit_notification_cb"
+2017-02-10 12:54:16		fifo: pipe closed
+2017-02-10 12:54:17		python: scripts unloaded
+2017-02-10 13:14:20		perl scripts loaded: buffers
+2017-02-10 13:14:20		slack: DEBUG: Loading messages from cache.
+2017-02-10 13:14:20		slack: DEBUG: Completed loading messages from cache.
+2017-02-10 13:14:20		python scripts loaded: slack_extension
+2017-02-10 13:14:20		script: 331 scripts for WeeChat 1.6
+2017-02-10 13:14:20		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-02-10 13:14:38	=!=	Error: unknown command "/buffers" (type /help for help)
+2017-02-10 16:12:26		fifo: removing old fifo pipe "/home/cgmcintyre/.weechat/weechat_fifo_1744"
+2017-02-10 16:12:26		perl scripts loaded: buffers
+2017-02-10 16:12:26		slack: DEBUG: Loading messages from cache.
+2017-02-10 16:12:26		slack: DEBUG: Completed loading messages from cache.
+2017-02-10 16:12:26		python scripts loaded: slack_extension
+2017-02-10 16:12:26		script: 331 scripts for WeeChat 1.6
+2017-02-10 16:12:26		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-02-10 16:53:01	=!=	python: function "quit_notification_cb" must return a valid value
+2017-02-10 16:53:01	=!=	python: error in function "quit_notification_cb"
+2017-02-10 16:53:01		fifo: pipe closed
+2017-02-10 16:53:01		python: scripts unloaded
+2017-02-12 19:23:50		perl scripts loaded: buffers
+2017-02-12 19:23:50		slack: DEBUG: Loading messages from cache.
+2017-02-12 19:23:50		slack: DEBUG: Completed loading messages from cache.
+2017-02-12 19:23:50		python scripts loaded: slack_extension
+2017-02-12 19:23:50		script: downloading list of scripts...
+2017-02-12 19:23:50		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-02-12 19:23:50	=!=	script: error downloading list of scripts: curl error 6 (Could not resolve host: weechat.org) (URL: "https://weechat.org/files/plugins.xml.gz")
+2017-02-12 19:24:07	=!=	python: function "quit_notification_cb" must return a valid value
+2017-02-12 19:24:07	=!=	python: error in function "quit_notification_cb"
+2017-02-12 19:24:07		fifo: pipe closed
+2017-02-12 19:24:07		python: scripts unloaded
+2017-02-14 14:41:59		perl scripts loaded: buffers
+2017-02-14 14:41:59		slack: DEBUG: Loading messages from cache.
+2017-02-14 14:41:59		slack: DEBUG: Completed loading messages from cache.
+2017-02-14 14:41:59		python scripts loaded: slack_extension
+2017-02-14 14:41:59		script: downloading list of scripts...
+2017-02-14 14:41:59		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-02-14 14:42:00		script: 331 scripts for WeeChat 1.6
+2017-02-14 14:43:49	=!=	python: function "quit_notification_cb" must return a valid value
+2017-02-14 14:43:49	=!=	python: error in function "quit_notification_cb"
+2017-02-14 14:43:49		fifo: pipe closed
+2017-02-14 14:43:49		python: scripts unloaded
+2017-02-14 14:45:14		New key binding (context "mouse"): @bar(buffers):ctrl-wheeldown => hsignal:buffers_mouse
+2017-02-14 14:45:14		New key binding (context "mouse"): @bar(buffers):ctrl-wheelup => hsignal:buffers_mouse
+2017-02-14 14:45:14		New key binding (context "mouse"): @item(buffers):button2* => hsignal:buffers_mouse
+2017-02-14 14:45:14		New key binding (context "mouse"): @item(buffers):button1* => hsignal:buffers_mouse
+2017-02-14 14:45:14		perl scripts loaded: buffers
+2017-02-14 14:45:14		slack: DEBUG: Loading messages from cache.
+2017-02-14 14:45:14		slack: DEBUG: Completed loading messages from cache.
+2017-02-14 14:45:14		python scripts loaded: slack_extension
+2017-02-14 14:45:14		script: 331 scripts for WeeChat 1.6
+2017-02-14 14:45:14		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-02-14 14:46:55	+	Error: option "nicklist.hidden" not found
+2017-02-14 14:47:34		python: stdout/stderr: __weechat_plugin__:914: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+2017-02-14 14:49:06	+	python: function "quit_notification_cb" must return a valid value
+2017-02-14 14:49:06	+	python: error in function "quit_notification_cb"
+2017-02-14 14:49:06		fifo: pipe closed
+2017-02-14 14:49:07		python: scripts unloaded
+2017-02-14 14:49:21		perl scripts loaded: buffers
+2017-02-14 14:49:21		slack: DEBUG: Loading messages from cache.
+2017-02-14 14:49:21		slack: DEBUG: Completed loading messages from cache.
+2017-02-14 14:49:21		python scripts loaded: slack_extension
+2017-02-14 14:49:21		script: 331 scripts for WeeChat 1.6
+2017-02-14 14:49:21		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-02-14 14:49:55	=!=	python: function "quit_notification_cb" must return a valid value
+2017-02-14 14:49:55	=!=	python: error in function "quit_notification_cb"
+2017-02-14 14:49:55		fifo: pipe closed
+2017-02-14 14:49:55		python: scripts unloaded
+2017-02-14 14:50:09		perl scripts loaded: buffers
+2017-02-14 14:50:09		slack: DEBUG: Loading messages from cache.
+2017-02-14 14:50:09		slack: DEBUG: Completed loading messages from cache.
+2017-02-14 14:50:09		python scripts loaded: slack_extension
+2017-02-14 14:50:09		script: 331 scripts for WeeChat 1.6
+2017-02-14 14:50:09		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-02-14 14:51:44	=!=	python: function "quit_notification_cb" must return a valid value
+2017-02-14 14:51:44	=!=	python: error in function "quit_notification_cb"
+2017-02-14 14:51:44		fifo: pipe closed
+2017-02-14 14:51:44		python: scripts unloaded
+2017-02-14 14:59:52		perl scripts loaded: buffers
+2017-02-14 14:59:52		slack: DEBUG: Loading messages from cache.
+2017-02-14 14:59:52		slack: DEBUG: Completed loading messages from cache.
+2017-02-14 14:59:52		python scripts loaded: slack_extension
+2017-02-14 14:59:52		script: 331 scripts for WeeChat 1.6
+2017-02-14 14:59:52		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-02-14 15:01:32	=!=	You can not write text in this buffer
+2017-02-14 15:01:35	=!=	python: function "quit_notification_cb" must return a valid value
+2017-02-14 15:01:35	=!=	python: error in function "quit_notification_cb"
+2017-02-14 15:01:35		fifo: pipe closed
+2017-02-14 15:01:35		python: scripts unloaded
