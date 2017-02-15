@@ -6,3 +6,4 @@ plugged/
 # Weechat
 sec.conf
 logs/
+weechat.log
