@@ -39,6 +39,10 @@ Plug 'tpope/vim-surround'
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
 
+" Colorschemes
+Plug 'vim-ruby/vim-ruby'
+
+
 call plug#end()
 filetype plugin indent on
 
@@ -136,6 +140,7 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " Key mappings
+cmap w!! w !sudo tee > /dev/null %
 map <F9> :tabnew<CR>
 map <F10> :tabclose<CR>
 nnoremap <tab> :tabnext<CR>

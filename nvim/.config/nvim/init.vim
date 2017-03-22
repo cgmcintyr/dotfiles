@@ -42,6 +42,9 @@ Plug 'flazz/vim-colorschemes'
 " Ansible support
 Plug 'chase/vim-ansible-yaml'
 
+" Ruby
+Plug 'vim-ruby/vim-ruby'
+
 call plug#end()
 filetype plugin indent on
 
@@ -80,18 +83,6 @@ syntax on
 
 " Default encoding - change default encoding as you want
 set enc=utf-8
-
-" Terminal
-"if has('gui_running')
-"else
-"    set term=xterm-256color
-"    if &term =~ '256color'
-"        " disable Background Color Erase (BCE) so that color schemes
-"        " render properly when inside 256-color tmux and GNU screen.
-"        " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
-"        set t_ut=
-"    endif
-"endif
 
 " Font
 if has('gui_running')
@@ -140,6 +131,7 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " Key mappings
+cmap w!! w !sudo tee > /dev/null %
 map <F9> :tabnew<CR>
 map <F10> :tabclose<CR>
 nnoremap <tab> :tabnext<CR>
