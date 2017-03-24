@@ -1,7 +1,6 @@
 " NOT COMPATIBLE TO LEGACY VI VERSIONS
 set nocompatible
 
-
 "==============================Plugin List==================================="
 
 filetype off
@@ -116,6 +115,14 @@ set magic
 set nu
 set colorcolumn=79
 highlight ColorColumn ctermbg=235
+
+set list!
+if has('gui_running')
+    set listchars=tab:▶\ ,trail:·,extends:\#,nbsp:.
+else
+    set listchars=tab:>.,trail:.,extends:\#,nbsp:.
+endif
+hi SpecialKey ctermfg=66 guifg=#649A9A
 
 " Don't have to press shift when typing commands
 map ; :
