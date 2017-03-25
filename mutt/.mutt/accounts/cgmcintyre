@@ -1,0 +1,15 @@
+set from = "me@cgmcintyre.com"
+#set signature = "$HOME/.mutt/cgmcintyre.sig"
+set sendmail = "/usr/bin/msmtp -a cgmcintyre"
+
+set spoolfile = "+cgmcintyre/INBOX"
+set record = "+cgmcintyre/INBOX.Sent"
+set postponed = "+cgmcintyre/INBOX.Drafts"
+macro index D \
+              "<save-message>+cgmcintyre/INBOX.Trash<enter>" \
+              "move message to the trash"
+macro index A \
+              "<save-message>+cgmcintyre/INBOX.Archive<enter>" \
+              "move message to the archives"
+
+source ~/.mutt/colors/cgmcintyre

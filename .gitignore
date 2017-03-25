@@ -7,3 +7,10 @@ plugged/
 sec.conf
 logs/
 weechat.log
+
+# Vim
+vim/.vim/plugged/
+
+# Mutt
+mutt/.mutt/cache
+mutt/.mutt/mailboxes

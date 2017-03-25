@@ -1,0 +1,37 @@
+# Offline IMAP configuration for a work and personal email account.
+# Replace <workname> and cgmcintyre with appropriate names.
+
+[general]
+accounts = cgmcintyre
+maxsyncaccounts = 1
+ui = basic
+
+[Account cgmcintyre]
+localrepository = cgmcintyre-local
+remoterepository = cgmcintyre-remote
+autorefresh = 5
+quick = 10
+
+[Repository cgmcintyre-local]
+type = Maildir
+localfolders = ~/.mail/cgmcintyre
+
+[Repository cgmcintyre-remote]
+type = IMAP
+remotehost = mail.runbox.com
+remoteuser = me@cgmcintyre.com
+remotepass = password
+ssl = yes
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+keepalive = 60
+holdconnectionopen = yes
+
+# this writes the mailbox names to a file which is
+# then sourced by mutt
+[mbnames]
+enabled = yes
+filename = ~/.mutt/mailboxes
+header = "mailboxes "
+peritem = "+%(accountname)s/%(foldername)s"
+sep = " "
+footer = "\n"
