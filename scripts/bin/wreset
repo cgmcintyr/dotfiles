@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+sudo killall wpa_supplicant
+sudo wpa_supplicant -B -iwlan0 -c/etc/wpa_supplicant/wpa_supplicant.conf &&
+  sudo dhclient wlan0
