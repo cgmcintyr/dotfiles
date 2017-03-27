@@ -4,6 +4,7 @@
 [general]
 accounts = cgmcintyre
 maxsyncaccounts = 1
+pythonfile = ~/.offlineimap.py
 ui = basic
 
 [Account cgmcintyre]
@@ -20,7 +21,7 @@ localfolders = ~/.mail/cgmcintyre
 type = IMAP
 remotehost = mail.runbox.com
 remoteuser = me@cgmcintyre.com
-remotepass = password
+remotepasseval = mailpasswd("cgmcintyre")
 ssl = yes
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 keepalive = 60

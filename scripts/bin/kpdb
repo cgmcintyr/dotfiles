@@ -1,0 +1,105 @@
+#!/usr/bin/env python3
+import dropbox
+
+import argparse
+import filecmp
+import os
+import shutil
+import sys
+import time
+import subprocess
+
+
+NOW = int(time.time())
+FNAME = 'keepass.kdbx'
+FBACK = '{}-keppass.kdbx'.format(NOW)
+BDIR = '.keepass'
+
+LOCAL_PATH        = os.path.expanduser('~')
+LOCAL             = os.path.join(LOCAL_PATH, FNAME)
+LOCAL_BACKUP_PATH = os.path.join(LOCAL_PATH, BDIR)
+LOCAL_BACKUP      = os.path.join(LOCAL_BACKUP_PATH, FBACK)
+
+REMOTE_PATH        = '/'
+REMOTE             = os.path.join(REMOTE_PATH, FNAME)
+REMOTE_BACKUP_PATH = os.path.join(REMOTE_PATH, BDIR)
+REMOTE_BACKUP      = os.path.join(REMOTE_BACKUP_PATH, FBACK)
+
+TEMP_PATH = '/tmp'
+TEMP = os.path.join(TEMP_PATH, FNAME)
+
+PASSWORDS_PATH = os.path.join(os.path.expanduser('~'), '.passwords')
+
+def accesstoken(account):
+    path = os.path.join(PASSWORDS_PATH, "dropbox-{}-access.gpg".format(account))
+    return subprocess.check_output(["gpg", "--quiet", "--use-agent", "-d", path]).strip().decode('utf-8')
+
+dbx = dropbox.Dropbox(accesstoken("cgmcintyre"))
+
+def parse_args(args):
+    parser = argparse.ArgumentParser(description='kdbx')
+    subparsers = parser.add_subparsers(help='sub-command help',
+                                       dest='commands')
+
+    upload = subparsers.add_parser('upload', help='upload kdbx file to remote')
+    upload.set_defaults(which='upload')
+
+    sync = subparsers.add_parser('sync', help='sync local kdbx file with remote')
+    sync.set_defaults(which='sync')
+
+    return parser.parse_args(args)
+
+
+def ensure_local_backup_dir_exists():
+    if not os.path.exists(LOCAL_BACKUP_PATH):
+        os.makedirs(LOCAL_BACKUP_PATH)
+
+
+def sync():
+    ensure_local_backup_dir_exists()
+
+    if os.path.isfile(LOCAL):
+        print("backing up {} -> {}".format(LOCAL, LOCAL_BACKUP))
+        shutil.copyfile(LOCAL, LOCAL_BACKUP)
+
+    print("downloading from remote...")
+    dbx.files_download_to_file(LOCAL, REMOTE)
+
+    if filecmp.cmp(LOCAL, LOCAL_BACKUP):
+        print("no changes, removing {}".format(LOCAL_BACKUP))
+        os.remove(LOCAL_BACKUP)
+
+    print('sync complete')
+
+
+def upload():
+    dbx.files_download_to_file(TEMP, REMOTE)
+
+    if filecmp.cmp(LOCAL, TEMP):
+        print("no changes, cancelling upload".format(LOCAL_BACKUP))
+        os.remove(TEMP)
+        return
+    else:
+        os.remove(TEMP)
+
+    try:
+        dbx.files_create_folder(REMOTE_BACKUP_PATH)
+    except dropbox.exceptions.ApiError:
+        pass
+
+    dbx.files_copy(REMOTE, REMOTE_BACKUP)
+    with open(LOCAL, 'rb') as local:
+        dbx.files_upload(local.read(), REMOTE, mode=dropbox.files.WriteMode.overwrite)
+
+    print('upload complete')
+
+
+if __name__ == '__main__':
+    args = parse_args(sys.argv[1:])
+
+    if args.commands == 'upload':
+        upload()
+    elif args.commands == 'sync':
+        sync()
+    else:
+        parse_args(['--help'])
