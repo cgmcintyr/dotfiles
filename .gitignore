@@ -12,8 +12,8 @@ weechat.log
 vim/.vim/plugged/
 
 # Mutt
-mutt/.mutt/cache
-mutt/.mutt/mailboxes
+mail/.mutt/cache
+mail/.mutt/mailboxes
 
 # Passwords
 *-pass.gpg

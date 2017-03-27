@@ -1,6 +1,5 @@
 ## Global Settings ##
 set realname='Christopher McIntyre'
-set my_msmtp_pass=`gpg -d ~/.msmtp/runbox-cgmcintyre-pass.gpg`
 
 ##############
 ## Incoming ##
