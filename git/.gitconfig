@@ -1,6 +1,6 @@
 [user]
-	name = Christopher McIntyre
-	email = me@cgmcintyre.com
+    name = Christopher McIntyre
+    email = me@cgmcintyre.com
 [core]
     editor = vim
     whitespace = fix, -indent-with-non-tab, trailing-space

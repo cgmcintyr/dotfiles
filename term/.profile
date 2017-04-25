@@ -38,14 +38,14 @@ if [ -e "$HOME/.aliases" ] ; then
     source "$HOME/.aliases"
 fi
 
-# Invoke GnuPG-Agent the first time we login.
-# Does `~/.gpg-agent-info' exist and points to gpg-agent process accepting signals?
-if test -f $HOME/.gpg-agent-info && \
-    kill -0 `cut -d: -f 2 $HOME/.gpg-agent-info` 2>/dev/null; then
-    GPG_AGENT_INFO=`cat $HOME/.gpg-agent-info | cut -c 16-`
-else
-    # No, gpg-agent not available; start gpg-agent
-    eval `gpg-agent --daemon --no-grab --write-env-file $HOME/.gpg-agent-info`
+# Start gpg-agent 
+# NB: After version 2.1 the gpu-agent-info file is no longer needed
+#     see https://www.gnupg.org/faq/whats-new-in-2.1.html#autostart
+if test "$( gpg-agent --version | head -n 1 | awk '{print $3, "\n2.1.0"}' | sort -V | head -n 1)" != "2.1.0"; then
+  [ -f ~/.gpg-agent-info ] && source ~/.gpg-agent-info
+  if [ -S "${GPG_AGENT_INFO%%:*}" ]; then
+    export GPG_AGENT_INFO
+  else
+    eval $( gpg-agent --daemon --write-env-file ~/.gpg-agent-info )
+  fi
 fi
-export GPG_TTY=`tty`
-export GPG_AGENT_INFO

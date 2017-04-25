@@ -27,7 +27,9 @@ URxvt.scrollstyle: rxvt
 URxvt.perl-ext-common:        default,xkr-clipboard
 URxvt.iso14755:               false
 URxvt.keysym.Shift-Control-C: perl:clipboard:copy
-URxvt.keysym.Control-Insert:  perl:clipboard:copy<Paste>
+URxvt.keysym.Control-Insert:  perl:clipboard:copy
+URxvt.copyCommand: xsel -ib
+URxvt.pasteCommand: xsel -ob
 
 !-[Clickable URLs]-----
 urxvt*perl-lib:            /usr/lib/urxvt/perl/
@@ -37,7 +39,6 @@ urxvt*matcher.button:        1
 urxvt*matcher.pattern.1:   \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
 
 !-[Fonts]--------------
-!Terminus
 #define termfont	xft:DejavuSansMono:medium:pixelsize=14
 #define termfontbold	xft:DejavuSansMono:bold:pixelsize=14
 URxvt.font:           termfont
@@ -45,6 +46,13 @@ URxvt.boldFont:       termfontbold
 URxvt.italicFont:     termfont
 URxvt.boldItalicFont: termfontbold
 URxvt.letterSpace: -1
+
+!-[Xterm]-------------
+xterm*faceName: DejaVu Sans Mono
+xterm*faceSize: 10
+xterm*loginShell: true
+xterm*savelines: 2000
+xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 
 !-[Theme]--------------
 ! Jellybeans Terminal Colours

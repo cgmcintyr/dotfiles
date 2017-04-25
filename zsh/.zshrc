@@ -29,6 +29,10 @@ VENV="$(which virtualenvwrapper.sh)"
 # rvm completion
 fpath=(~/.zsh/Completion $fpath)
 
+# Export GPG tty
+GPG_TTY=$(tty)
+export GPG_TTY
+
 # Personal aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"

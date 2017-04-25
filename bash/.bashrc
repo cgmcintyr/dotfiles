@@ -118,3 +118,6 @@ export WORKON_HOME="$HOME/.virtualenvs"
 VENV="$(which virtualenvwrapper.sh)"
 [[ ! -z $VENV ]] && source $VENV
 
+# Export GPG tty
+GPG_TTY=$(tty)
+export GPG_TTY
