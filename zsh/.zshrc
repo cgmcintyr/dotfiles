@@ -1,5 +1,5 @@
 # Setup oh-my-zsh
-export ZSH=/home/cgmcintyre/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 ZSH_THEME="daveverwer"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
