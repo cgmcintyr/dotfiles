@@ -116,7 +116,7 @@ fi
 [ ! -d "$HOME/.virtualenvs" ] && mkdir "$HOME/.virtualenvs"
 export WORKON_HOME="$HOME/.virtualenvs"
 VENV="$(which virtualenvwrapper.sh)"
-[[ ! -z $VENV ]] && source $VENV
+[[ ! -z $VENV ]] && source "$VENV"
 
 # Export GPG tty
 GPG_TTY=$(tty)

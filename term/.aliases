@@ -8,3 +8,6 @@ alias ff-amazon-jobs="firefox -new-tab 'https://uk-amazon.icims.com/jobs/login?l
 
 # Codethink
 alias ctgit='ssh git@git.codethink.co.uk'
+
+# Grepping
+alias mygrep="grep -inIEr –color=ALWAYS"
