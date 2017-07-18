@@ -44,6 +44,9 @@ Plug 'chase/vim-ansible-yaml'
 " Ruby
 Plug 'vim-ruby/vim-ruby'
 
+" Vue.js syntax
+Plug 'posva/vim-vue'
+
 call plug#end()
 filetype plugin indent on
 

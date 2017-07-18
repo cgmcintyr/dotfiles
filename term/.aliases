@@ -1,5 +1,5 @@
 # General
-alias nv="nvim"
+alias n="nvim"
 
 # Firefox
 alias ff-trello="firefox -new-tab 'http://www.trello.com'"
@@ -11,3 +11,12 @@ alias ctgit='ssh git@git.codethink.co.uk'
 
 # Grepping
 alias mygrep="grep -inIEr –color=ALWAYS"
+
+# Django
+alias djt="python3 manage.py test"
+alias djs="python3 manage.py runserver"
+
+# Vue
+alias vue-init="docker run --rm -ti -v /home/christophermcintyre/devel/vue/brick:/srv -w /srv rflavien/vue-cli:v2 init"
+alias vue-dev="docker run --rm -v $(pwd):/src -w /src -p 8080:8080 node:8.1 bash -c \"npm install && npm run dev\""
+alias vue-production="docker run --rm -v $(pwd):/src -w /src node:8.1 bash -c \"npm install && npm run build\""

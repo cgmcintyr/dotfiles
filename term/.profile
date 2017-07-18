@@ -26,6 +26,11 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# Add cabal to PATH
+if [ -d "$HOME/.cabal/bin" ] ; then
+    export PATH="$PATH:$HOME/.cabal/bin"
+fi
+
 # Add RVM to PATH for scripting
 if [ -d "$HOME/bin" ] ; then
     export PATH="$PATH:$HOME/.rvm/bin"

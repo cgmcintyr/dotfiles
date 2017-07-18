@@ -1,8 +1,12 @@
 # Setup oh-my-zsh
 export ZSH=~/.oh-my-zsh
 ZSH_THEME="daveverwer"
-plugins=(git)
+plugins=(git vi-mode)
 source $ZSH/oh-my-zsh.sh
+
+# Vi mode
+export KEYTIMEOUT=1
+bindkey '^[[Z' reverse-menu-complete
 
 # Language environment
 export LANG=en_GB.UTF-8
