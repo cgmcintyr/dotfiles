@@ -24,7 +24,8 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'terryma/vim-smooth-scroll'
 
 " Auto completion
-Plug 'ervandew/supertab'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi'
 
 " Multiple cursor
 Plug 'terryma/vim-multiple-cursors'
@@ -47,9 +48,11 @@ Plug 'vim-ruby/vim-ruby'
 " Vue.js syntax
 Plug 'posva/vim-vue'
 
+" Latex
+Plug 'lervag/vimtex'
+
 call plug#end()
 filetype plugin indent on
-
 
 "=============================Plugin Settings================================="
 
@@ -74,6 +77,17 @@ let g:move_key_modifier = 'C'
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 0
 
+"DEOPLETE
+let g:deoplete#enable_at_startup = 1
+if !exists('g:deoplete#omni#input_patterns')
+  let g:deoplete#omni#input_patterns = {}
+endif
+" let g:deoplete#disable_auto_complete = 1
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+"DEOPLETE-JEDI
+let g:deoplete#sources#jedi#python_path = '/home/christophermcintyre/.virtualenvs/NVIM3/bin/python3.5'
 
 "============================General Settings================================"
 
@@ -82,6 +96,10 @@ set background=dark
 "colorscheme wombat256mod
 colorscheme jellybeans
 syntax on
+
+" Python
+let g:python_host_prog = '/home/christophermcintyre/.virtualenvs/NVIM/bin/python2.7'
+let g:python3_host_prog = '/home/christophermcintyre/.virtualenvs/NVIM3/bin/python3.5'
 
 " Default encoding - change default encoding as you want
 set enc=utf-8
@@ -142,6 +160,7 @@ map <C-l> <C-w>l
 
 " Key mappings
 cmap w!! w !sudo tee > /dev/null %
+cabbrev w!! w !sudo tee > /dev/null %
 map <F9> :tabnew<CR>
 map <F10> :tabclose<CR>
 nnoremap <tab> :tabnext<CR>
@@ -165,3 +184,5 @@ au FileType less setl ts=2 sw=2 sts=2
 " Filetype miscs
 au! BufRead,BufNewFile *.wsgi setfiletype python
 au! BufRead,BufNewFile *.less setfiletype less
+au! BufRead,BufNewFile *.less setfiletype less
+
