@@ -20,3 +20,6 @@ alias djs="python3 manage.py runserver"
 alias vue-init="docker run --rm -ti -v /home/christophermcintyre/devel/vue/brick:/srv -w /srv rflavien/vue-cli:v2 init"
 alias vue-dev="docker run --rm -v $(pwd):/src -w /src -p 8080:8080 node:8.1 bash -c \"npm install && npm run dev\""
 alias vue-production="docker run --rm -v $(pwd):/src -w /src node:8.1 bash -c \"npm install && npm run build\""
+
+# OCI
+alias skocopy-docker="skopeo --debug --insecure-policy copy --src-cert-dir ~/.docker "
