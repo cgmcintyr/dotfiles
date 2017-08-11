@@ -1,27 +1,26 @@
 # Offline IMAP configuration for a work and personal email account.
-# Replace <workname> and cgmcintyre with appropriate names.
 
 [general]
-accounts = cgmcintyre
+accounts = christophermcintyre
 maxsyncaccounts = 1
 pythonfile = ~/.offlineimap.py
 ui = basic
 
-[Account cgmcintyre]
-localrepository = cgmcintyre-local
-remoterepository = cgmcintyre-remote
+[Account christophermcintyre]
+localrepository = christophermcintyre-local
+remoterepository = christophermcintyre-remote
 autorefresh = 5
 quick = 10
 
-[Repository cgmcintyre-local]
+[Repository christophermcintyre-local]
 type = Maildir
-localfolders = ~/.mail/cgmcintyre
+localfolders = ~/.mail/christophermcintyre
 
-[Repository cgmcintyre-remote]
+[Repository christophermcintyre-remote]
 type = IMAP
-remotehost = mail.runbox.com
-remoteuser = me@cgmcintyre.com
-remotepasseval = mailpasswd("cgmcintyre")
+remotehost = mail.codethink.co.uk
+remoteuser = christophermcintyre@codethink.co.uk
+remotepasseval = mailpasswd("christophermcintyre")
 ssl = yes
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 keepalive = 60
