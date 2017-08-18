@@ -1,2 +1,5 @@
 bind main R !git rebase -i %(commit)^
 bind diff R !git rebase -i %(commit)^
+
+bind main B !git branch newbranch %(commit)
+bind diff B !git branch newbranch %(commit)
