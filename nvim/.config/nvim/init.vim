@@ -87,7 +87,7 @@ autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 "DEOPLETE-JEDI
-let g:deoplete#sources#jedi#python_path = '/home/christophermcintyre/.virtualenvs/NVIM3/bin/python3.5'
+let g:deoplete#sources#jedi#python_path = $HOME.'/.virtualenvs/NVIM3/bin/python3'
 
 "============================General Settings================================"
 
@@ -98,8 +98,8 @@ colorscheme jellybeans
 syntax on
 
 " Python
-let g:python_host_prog = '/home/christophermcintyre/.virtualenvs/NVIM/bin/python2.7'
-let g:python3_host_prog = '/home/christophermcintyre/.virtualenvs/NVIM3/bin/python3.5'
+let g:python_host_prog = $HOME.'/.virtualenvs/NVIM/bin/python2'
+let g:python3_host_prog = $HOME.'/.virtualenvs/NVIM3/bin/python3'
 
 " Default encoding - change default encoding as you want
 set enc=utf-8
