@@ -23,17 +23,17 @@ settings = {
 def notify_show_hi( data, signal, message ):
     """Sends highlight message to be printed on notification"""
     if weechat.config_get_plugin('show_hilights') == "on":
-        show_notification("IRC Mention")
+        show_notification("IRC Mention: {}".format(message))
     return weechat.WEECHAT_RC_OK
 
 def notify_show_priv( data, signal, message ):
     """Sends private message to be printed on notification"""
     if weechat.config_get_plugin('show_priv_msg') == "on":
-        show_notification("IRC Message")
+        show_notification("IRC Message: {}".format(message))
     return weechat.WEECHAT_RC_OK
 
 def show_notification(message):
-    os.popen("tmux set display-time {0} && tmux display-message '{1}' &".format(5 * 1000, message ))
+    os.popen("tmux set display-time {0} && tmux display-message '{1}' &".format(10 * 1000, message ))
 
 if __name__ == "__main__":
     if weechat.register("tmuxnotify", "lukaszkorecki", "0.1", "GPL", "tmuxnotify: weechat notifications in tmux", "", ""):

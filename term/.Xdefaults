@@ -41,10 +41,10 @@ urxvt*matcher.pattern.1:   \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
 !-[Fonts]--------------
 #define termfont	xft:DejavuSansMono:medium:pixelsize=14
 #define termfontbold	xft:DejavuSansMono:bold:pixelsize=14
-URxvt.font:           termfont
-URxvt.boldFont:       termfontbold
-URxvt.italicFont:     termfont
-URxvt.boldItalicFont: termfontbold
+URxvt.font:           xft:DejavuSansMono:medium:pixelsize=14
+URxvt.boldFont:       xft:DejavuSansMono:bold:pixelsize=14
+URxvt.italicFont:     xft:DejavuSansMono:medium:pixelsize=14
+URxvt.boldItalicFont: xft:DejavuSansMono:bold:pixelsize=14
 URxvt.letterSpace: -1
 
 !-[Xterm]-------------
