@@ -36,6 +36,11 @@ if [ -d "$HOME/bin" ] ; then
     export PATH="$PATH:$HOME/.rvm/bin"
 fi
 
+# Add esp toolchain to PATH
+if [ -d "$HOME/devel/esp/xtensa-esp32-elf/bin" ] ; then
+    export PATH=$PATH:$HOME/devel/esp/xtensa-esp32-elf/bin
+fi
+
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
