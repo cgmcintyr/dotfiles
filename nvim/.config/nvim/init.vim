@@ -89,6 +89,9 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 "DEOPLETE-JEDI
 let g:deoplete#sources#jedi#python_path = $HOME.'/.virtualenvs/NVIM3/bin/python3'
 
+"VIMTEX
+"let g:vimtex_latexmk_options="-pdf -pdflatex='pdflatex -file-line-error -shell-escape -synctex=1'"
+
 "============================General Settings================================"
 
 " Default colorscheme

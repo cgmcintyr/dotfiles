@@ -36,6 +36,11 @@ if [ -d "$HOME/bin" ] ; then
     export PATH="$PATH:$HOME/.rvm/bin"
 fi
 
+# Add RVM to PATH for scripting
+if [ -d "$HOME/devel/esp/esp-idf" ] ; then
+    export IDF_PATH=$HOME/devel/esp/esp-idf
+fi
+
 # Add esp toolchain to PATH
 if [ -d "$HOME/devel/esp/xtensa-esp32-elf/bin" ] ; then
     export PATH=$PATH:$HOME/devel/esp/xtensa-esp32-elf/bin
