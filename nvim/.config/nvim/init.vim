@@ -97,7 +97,7 @@ let g:deoplete#sources#jedi#python_path = $HOME.'/.virtualenvs/NVIM3/bin/python3
 " Default colorscheme
 set background=dark
 "colorscheme wombat256mod
-colorscheme jellybeans
+"colorscheme jellybeans
 syntax on
 
 " Python

@@ -23,3 +23,9 @@ alias vue-production="docker run --rm -v $(pwd):/src -w /src node:8.1 bash -c \"
 
 # OCI
 alias skocopy-docker="skopeo --debug --insecure-policy copy --src-cert-dir ~/.docker "
+
+# Jabref
+alias jab="java -jar ~/.local/share/jabref/JabRef-4.0.jar >/dev/null 2>&1 &"
+
+# Dissertation
+alias words="find ./chapters -iname \"*.tex\" -type f -exec detex -n {} \; | wc"

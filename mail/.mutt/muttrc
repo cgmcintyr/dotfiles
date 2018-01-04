@@ -1,5 +1,8 @@
 ## Global Settings ##
-set realname='Christopher McIntyre'
+set realname='Christopher G McIntyre'
+
+macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
 
 ##############
 ## Incoming ##
@@ -13,7 +16,7 @@ set delete=yes
 # IMAP: offlineimap
 set folder = "~/.mail"
 #source ~/.mutt/mailboxes
-source ~/.mutt/accounts/christophermcintyre
+source ~/.mutt/accounts/cgmcintyre
 
 ##############
 ## Outgoing ##
@@ -21,7 +24,7 @@ source ~/.mutt/accounts/christophermcintyre
 
 set use_envelope_from=yes
 # default From: header
-folder-hook christophermcintyre/* source ~/.mutt/accounts/christophermcintyre
+folder-hook cgmcintyre/* source ~/.mutt/accounts/cgmcintyre
 # PGP keys
 #send-hook "~f <email-address>" set pgp_sign_as="<key>"
 
@@ -77,10 +80,10 @@ set folder_format="%2C %t %N %8s %d %f"
 
 ## Folders ##
 # macro's for switching folders
-#macro index gci "<change-folder> =christophermcintyre/INBOX<enter>"
-#macro index gcs "<change-folder> =christophermcintyre/INBOX.Sent<enter>"
-#macro index gcd "<change-folder> =christophermcintyre/INBOX.Drafts<enter>"
-#macro index gct "<change-folder> =christophermcintyre/INBOX.Trash<enter>"
+# macro index gci "<change-folder> =cgmcintyre/INBOX<enter>"
+# macro index gcs "<change-folder> =cgmcintyre/INBOX.Sent<enter>"
+# macro index gcd "<change-folder> =cgmcintyre/INBOX.Drafts<enter>"
+# macro index gct "<change-folder> =cgmcintyre/INBOX.Trash<enter>"
 
 ## Mailing Lists ##
 # these mailing lists are known by mutt

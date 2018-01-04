@@ -53,7 +53,11 @@ if [ -e "$HOME/.aliases" ] ; then
     source "$HOME/.aliases"
 fi
 
-# Start gpg-agent 
+# Load NVM into shell session
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+ #Start gpg-agent 
 # NB: After version 2.1 the gpu-agent-info file is no longer needed
 #     see https://www.gnupg.org/faq/whats-new-in-2.1.html#autostart
 if test "$( gpg-agent --version | head -n 1 | awk '{print $3, "\n2.1.0"}' | sort -V | head -n 1)" != "2.1.0"; then
