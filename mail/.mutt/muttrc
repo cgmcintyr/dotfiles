@@ -1,21 +1,18 @@
 ## Global Settings ##
 set realname='Christopher G McIntyre'
 
-macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
-macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
-
 ##############
 ## Incoming ##
 ##############
 
+set folder = "~/.mail"
 set mbox_type=Maildir
 set header_cache="~/.mutt/cache"
-# delete messages automatically when leaving a folder
+
+# Delete messages automatically when leaving a folder
 set delete=yes
 
 # IMAP: offlineimap
-set folder = "~/.mail"
-#source ~/.mutt/mailboxes
 source ~/.mutt/accounts/cgmcintyre
 
 ##############
@@ -23,8 +20,10 @@ source ~/.mutt/accounts/cgmcintyre
 ##############
 
 set use_envelope_from=yes
-# default From: header
+
+# Default From: header
 folder-hook cgmcintyre/* source ~/.mutt/accounts/cgmcintyre
+
 # PGP keys
 #send-hook "~f <email-address>" set pgp_sign_as="<key>"
 
@@ -34,7 +33,8 @@ folder-hook cgmcintyre/* source ~/.mutt/accounts/cgmcintyre
 
 set editor="nvim +':set textwidth=70'"
 set send_charset=utf-8
-# replying options
+
+# Replying options
 set fast_reply=yes
 set include=yes
 
@@ -42,15 +42,15 @@ set include=yes
 ## Viewing ##
 #############
 
-# visible headers
+# Visible headers
 ignore *
 unignore date: from: subject: to: cc:
 
-# message clean-up
+# Message clean-up
 set display_filter="tr -d '\r'" # trim possible M$ CR line endings
 set assumed_charset=utf-8 # for unknown charsets, assume utf-8
 
-# html email
+# HTML email
 set mailcap_path = ~/.mutt/mailcap
 auto_view text/html # automatically view html email
 alternative_order text/plain * # prefer text when available
@@ -59,9 +59,13 @@ set wrap=128 # wrap display for very long lines
 set markers=no
 set pager_stop=yes # stop at end of message when reading
 
-# extra key bindings
+# Extra key bindings
 bind pager ] half-down
 bind pager [ half-up
+
+# Urlscan with CTRL-B
+macro index,pager \cb "<pipe-message> urlscan<Enter>"
+macro attach,compose \cb "<pipe-entry> urlscan<Enter>"
 
 ################
 ## Appearance ##
@@ -73,12 +77,15 @@ set sort_aux=last-date-received
 set arrow_cursor # arrow instead of full line
 set pager_index_lines = 6
 
-# formatting
+# Formatting
 set date_format="%b %d [%H:%M]"
 set index_format="%4C %Z %d %-30.30L (%4c) %s"
 set folder_format="%2C %t %N %8s %d %f"
 
+#############
 ## Folders ##
+#############
+
 # macro's for switching folders
 # macro index gci "<change-folder> =cgmcintyre/INBOX<enter>"
 # macro index gcs "<change-folder> =cgmcintyre/INBOX.Sent<enter>"
