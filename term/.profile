@@ -57,6 +57,13 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
+# Golang
+export GOPATH=$HOME/devel/go
+if [ -d "$GOPATH/bin" ] ; then
+    export PATH=$PATH:$GOPATH/bin
+fi
+
+
  #Start gpg-agent 
 # NB: After version 2.1 the gpu-agent-info file is no longer needed
 #     see https://www.gnupg.org/faq/whats-new-in-2.1.html#autostart
@@ -65,6 +72,6 @@ if test "$( gpg-agent --version | head -n 1 | awk '{print $3, "\n2.1.0"}' | sort
   if [ -S "${GPG_AGENT_INFO%%:*}" ]; then
     export GPG_AGENT_INFO
   else
-    eval $( gpg-agent --daemon --write-env-file ~/.gpg-agent-info )
+    eval "$( gpg-agent --daemon --write-env-file ~/.gpg-agent-info )"
   fi
 fi

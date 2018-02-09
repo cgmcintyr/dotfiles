@@ -9,6 +9,9 @@ call plug#begin('~/.vim/plugged')
 " Git interface
 Plug 'tpope/vim-fugitive'
 
+" Golang
+Plug 'zchee/nvim-go', { 'do': 'make'}
+
 " File system navigation
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'

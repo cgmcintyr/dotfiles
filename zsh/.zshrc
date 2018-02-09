@@ -1,7 +1,8 @@
 # Setup oh-my-zsh
+
 export ZSH=~/.oh-my-zsh
 ZSH_THEME="daveverwer"
-plugins=(git vi-mode fzf-zsh)
+plugins=(vi-mode fzf-zsh)
 source $ZSH/oh-my-zsh.sh
 
 # Vi mode
