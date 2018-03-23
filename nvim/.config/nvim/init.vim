@@ -10,7 +10,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 
 " Golang
-Plug 'zchee/nvim-go', { 'do': 'make'}
+" Plug 'zchee/nvim-go', { 'do': 'make'}
 
 " File system navigation
 Plug 'scrooloose/nerdtree'
@@ -97,11 +97,9 @@ let g:deoplete#sources#jedi#python_path = $HOME.'/.virtualenvs/NVIM3/bin/python3
 
 "============================General Settings================================"
 
-" Default colorscheme
-set background=dark
-"colorscheme wombat256mod
-"colorscheme jellybeans
+" Colors
 syntax on
+hi Visual ctermbg=7 ctermfg=none
 
 " Python
 let g:python_host_prog = $HOME.'/.virtualenvs/NVIM/bin/python2'

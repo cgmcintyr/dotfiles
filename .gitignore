@@ -17,3 +17,8 @@ mail/.mutt/mailboxes
 
 # Passwords
 *-pass.gpg
+
+# ssh
+id_rsa
+id_rsa.pub
+known_hosts

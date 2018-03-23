@@ -55,6 +55,8 @@ xterm*savelines: 2000
 xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 
 !-[Theme]--------------
+*.cursorColor: #FF1200
+
 *.background: #151515
 *.foreground: #ffffff
 ! black
