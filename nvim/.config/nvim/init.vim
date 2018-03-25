@@ -6,12 +6,6 @@ set nocompatible
 filetype off
 call plug#begin('~/.vim/plugged')
 
-" Git interface
-Plug 'tpope/vim-fugitive'
-
-" Golang
-" Plug 'zchee/nvim-go', { 'do': 'make'}
-
 " Elixir
 Plug 'elixir-lang/vim-elixir'
 Plug 'thinca/vim-ref'
@@ -21,37 +15,14 @@ Plug 'awetzel/elixir.nvim', { 'do': 'yes \| ./install.sh' }
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 
-" Easy commenting
-Plug 'scrooloose/nerdcommenter'
-
-" Fuzzy search
-Plug 'kien/ctrlp.vim'
-Plug 'Lokaltog/vim-easymotion'
-
-" Smooth scroll
-Plug 'terryma/vim-smooth-scroll'
-
 " Auto completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+" Python
 Plug 'zchee/deoplete-jedi'
-
-" Multiple cursor
-Plug 'terryma/vim-multiple-cursors'
-
-" Visual moves
-Plug 'kuc2477/vim-move'
-
-" Surround
-Plug 'tpope/vim-surround'
-
-" Colorschemes
-Plug 'flazz/vim-colorschemes'
 
 " Ansible support
 Plug 'chase/vim-ansible-yaml'
-
-" Ruby
-Plug 'vim-ruby/vim-ruby'
 
 " Vue.js syntax
 Plug 'posva/vim-vue'
@@ -62,28 +33,13 @@ Plug 'lervag/vimtex'
 call plug#end()
 filetype plugin indent on
 
-"=============================Plugin Settings================================="
+"=============================Plugin Settings================================"
 
 "THE-NERD-TREE
 let g:nerdtree_tabs_open_on_console_startup = 0
 let g:nerdtree_tabs_autoclose = 1
 let g:NERDTreeDirArrows = 0
 map <C-u> :NERDTreeTabsToggle<CR>
-
-"EASY-MOTION
-let g:EasyMotion_smartcase = 1
-nmap <C-f> <Plug>(easymotion-sn)
-
-"VIM-SMOOTH-SCROLL
-noremap <silent> gk :call smooth_scroll#up(&scroll, 0, 6)<CR>
-noremap <silent> gj :call smooth_scroll#down(&scroll, 0, 6)<CR>
-
-"VIM-MOVE
-let g:move_key_modifier = 'C'
-
-"CTRLP
-let g:ctrlp_cmd = 'CtrlPMixed'
-let g:ctrlp_working_path_mode = 0
 
 "DEOPLETE
 let g:deoplete#enable_at_startup = 1
@@ -97,20 +53,28 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 "DEOPLETE-JEDI
 let g:deoplete#sources#jedi#python_path = $HOME.'/.virtualenvs/NVIM3/bin/python3'
 
-"VIMTEX
-"let g:vimtex_latexmk_options="-pdf -pdflatex='pdflatex -file-line-error -shell-escape -synctex=1'"
-
 "============================General Settings================================"
 
 " Colors
 syntax on
 hi Visual ctermbg=7 ctermfg=none
+hi Pmenu ctermfg=7 ctermbg=4
+hi SpecialKey ctermfg=66 guifg=#649A9A
+
+" UI
+set nu
+set list!
+if has('gui_running')
+    set listchars=tab:▶\ ,trail:·,extends:\#,nbsp:.
+else
+    set listchars=tab:>.,trail:.,extends:\#,nbsp:.
+endif
 
 " Python
 let g:python_host_prog = $HOME.'/.virtualenvs/NVIM/bin/python2'
 let g:python3_host_prog = $HOME.'/.virtualenvs/NVIM3/bin/python3'
 
-" Default encoding - change default encoding as you want
+" Default encoding
 set enc=utf-8
 
 " Font
@@ -140,19 +104,6 @@ set tabstop=4
 set hlsearch
 set incsearch
 set magic
-
-" UI
-set nu
-set colorcolumn=79
-highlight ColorColumn ctermbg=235
-
-set list!
-if has('gui_running')
-    set listchars=tab:▶\ ,trail:·,extends:\#,nbsp:.
-else
-    set listchars=tab:>.,trail:.,extends:\#,nbsp:.
-endif
-hi SpecialKey ctermfg=66 guifg=#649A9A
 
 " Don't have to press shift when typing commands
 map ; :
@@ -193,5 +144,3 @@ au FileType less setl ts=2 sw=2 sts=2
 " Filetype miscs
 au! BufRead,BufNewFile *.wsgi setfiletype python
 au! BufRead,BufNewFile *.less setfiletype less
-au! BufRead,BufNewFile *.less setfiletype less
-

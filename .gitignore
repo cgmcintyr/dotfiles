@@ -19,6 +19,9 @@ mail/.mutt/mailboxes
 *-pass.gpg
 
 # ssh
-id_rsa
-id_rsa.pub
-known_hosts
+ssh/.ssh/*
+!ssh/.ssh/config
+
+# gpg
+gpg/.gnupg/*
+!gpg/.gnupg/gpg-agent.conf
