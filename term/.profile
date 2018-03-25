@@ -10,6 +10,11 @@
 
 export SHELL=/usr/bin/zsh
 
+if ! pgrep -x "redshift" > /dev/null
+then
+  redshift &
+fi
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists

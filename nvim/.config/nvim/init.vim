@@ -7,9 +7,8 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 " Elixir
-Plug 'elixir-lang/vim-elixir'
-Plug 'thinca/vim-ref'
-Plug 'awetzel/elixir.nvim', { 'do': 'yes \| ./install.sh' }
+Plug 'slashmili/alchemist.vim'
+Plug 'elixir-editors/vim-elixir'
 
 " File system navigation
 Plug 'scrooloose/nerdtree'
@@ -57,7 +56,7 @@ let g:deoplete#sources#jedi#python_path = $HOME.'/.virtualenvs/NVIM3/bin/python3
 
 " Colors
 syntax on
-hi Visual ctermbg=7 ctermfg=none
+hi Visual ctermbg=7 ctermfg=0
 hi Pmenu ctermfg=7 ctermbg=4
 hi SpecialKey ctermfg=66 guifg=#649A9A
 
