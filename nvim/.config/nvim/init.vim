@@ -12,6 +12,11 @@ Plug 'tpope/vim-fugitive'
 " Golang
 " Plug 'zchee/nvim-go', { 'do': 'make'}
 
+" Elixir
+Plug 'elixir-lang/vim-elixir'
+Plug 'thinca/vim-ref'
+Plug 'awetzel/elixir.nvim', { 'do': 'yes \| ./install.sh' }
+
 " File system navigation
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
@@ -85,7 +90,7 @@ let g:deoplete#enable_at_startup = 1
 if !exists('g:deoplete#omni#input_patterns')
   let g:deoplete#omni#input_patterns = {}
 endif
-" let g:deoplete#disable_auto_complete = 1
+let g:deoplete#disable_auto_complete = 0
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 

@@ -2,7 +2,7 @@
 
 export ZSH=~/.oh-my-zsh
 ZSH_THEME="daveverwer"
-plugins=(vi-mode fzf-zsh)
+plugins=(asdf fzf-zsh vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 # Vi mode

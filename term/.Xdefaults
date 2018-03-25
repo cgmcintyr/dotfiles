@@ -39,13 +39,19 @@ urxvt*matcher.button:        1
 urxvt*matcher.pattern.1:   \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
 
 !-[Fonts]--------------
-#define termfont	xft:DejavuSansMono:medium:pixelsize=14
-#define termfontbold	xft:DejavuSansMono:bold:pixelsize=14
+#define termfont	xft:DejavuSansMono:medium:pixelsize=14,xft:FontAwesome:antialias=true:pixelsize=12
+#define termfontbold	xft:DejavuSansMono:bold:pixelsize=14,xft:FontAwesome:antialias=true:pixelsize=12
 URxvt.font:           termfont
 URxvt.boldFont:       termfontbold
 URxvt.italicFont:     termfont
 URxvt.boldItalicFont: termfontbold
 URxvt.letterSpace: -1
+
+*.font:           termfont
+*.boldFont:       termfontbold
+*.italicFont:     termfont
+*.boldItalicFont: termfontbold
+*.letterSpace: 0
 
 !-[Xterm]-------------
 xterm*faceName: DejaVu Sans Mono
@@ -55,8 +61,6 @@ xterm*savelines: 2000
 xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 
 !-[Theme]--------------
-*.cursorColor: #FF1200
-
 *.background: #151515
 *.foreground: #ffffff
 ! black
