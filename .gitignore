@@ -28,5 +28,5 @@ gpg/.gnupg/*
 
 # zsh
 .zhistory
-.zcomdump*
+.zcompdump*
 .zcompcache/
