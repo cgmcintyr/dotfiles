@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+
+# Check if fzf installed
+if ! builtin type fzf >/dev/null 2>&1; then
+  return
+fi
+
+# Key bindings
+source "/usr/share/fzf/shell/key-bindings.zsh"
+
+# Tab completion
+export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"

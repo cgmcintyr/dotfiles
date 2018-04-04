@@ -8,11 +8,19 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-export SHELL=/usr/bin/zsh
+export SHELL=$(which zsh)
+export ZDOTDIR="$HOME/.config/zsh"
 
+# Ensure redshift is running
 if ! pgrep -x "redshift" > /dev/null
 then
   redshift &
+fi
+
+# Ensure dunst is running
+if ! pgrep -x "dunst" > /dev/null
+then
+  dunst &
 fi
 
 # if running bash
@@ -26,6 +34,10 @@ fi
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
+fi
+
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
 fi
 
 # set PATH so it includes user's .local bin if it exists
@@ -69,7 +81,6 @@ export GOPATH=$HOME/devel/go
 if [ -d "$GOPATH/bin" ] ; then
     export PATH=$PATH:$GOPATH/bin
 fi
-
 
  #Start gpg-agent 
 # NB: After version 2.1 the gpu-agent-info file is no longer needed

@@ -60,7 +60,7 @@ xterm*loginShell: true
 xterm*savelines: 2000
 xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 
-!-[Theme]--------------
+!-[Forest]------------
 *.background:       #170F0D
 *.foreground:       #746C48
 *.cursorColor:      #6666CC
@@ -81,3 +81,25 @@ xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 *.color14:          #778725
 *.color7:           #C8B55B
 *.color15:          #E4DC8C
+
+!-[Woodland]-----------
+!*background:   #fcfdea
+!*foreground:   #575a1d
+!*.cursorColor: #575a1d
+!*.colorBD:     #30330f
+!*color0: #575a1d
+!*color8: #6a6d30
+!*color1: #9a7438
+!*color9: #bf9a5f
+!*color2: #739d36
+!*color10: #99c25d
+!*color3: #9a9b36
+!*color11: #bfc05d
+!*color4: #717660
+!*color12: #979c84
+!*color5: #987460
+!*color13: #bd9a84
+!*color6: #719d5e
+!*color14: #97c282
+!*color7: #b4b779
+!*color15: #d7da9c

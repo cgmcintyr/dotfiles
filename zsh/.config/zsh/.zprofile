@@ -1,0 +1,1 @@
+/home/cgm/.config/zsh/.zprezto/runcoms/zprofile

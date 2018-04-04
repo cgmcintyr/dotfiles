@@ -25,3 +25,8 @@ ssh/.ssh/*
 # gpg
 gpg/.gnupg/*
 !gpg/.gnupg/gpg-agent.conf
+
+# zsh
+.zhistory
+.zcomdump*
+.zcompcache/

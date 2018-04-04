@@ -52,6 +52,11 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 "DEOPLETE-JEDI
 let g:deoplete#sources#jedi#python_path = $HOME.'/.virtualenvs/NVIM3/bin/python3'
 
+" Vimtex
+let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+let g:vimtex_view_general_options_latexmk = '--unique'
+
 "============================General Settings================================"
 
 " Colors
@@ -129,6 +134,9 @@ nnoremap = :vertical res +10<CR>
 nnoremap <leader>- :res -20<CR>
 nnoremap <leader>= :res +20<CR>
 
+" Reverse selection
+vnoremap ;rv c<C-O>:set revins<CR><C-R>"<Esc>:set norevins<CR>
+
 " Lang specific indentations
 au FileType sh setl ts=2 sw=2 sts=2
 au FileType bash setl ts=2 sw=2 sts=2
@@ -143,3 +151,19 @@ au FileType less setl ts=2 sw=2 sts=2
 " Filetype miscs
 au! BufRead,BufNewFile *.wsgi setfiletype python
 au! BufRead,BufNewFile *.less setfiletype less
+
+" Copy to clipboard
+vnoremap  <leader>y  "+y
+nnoremap  <leader>Y  "+yg_
+nnoremap  <leader>y  "+y
+nnoremap  <leader>yy  "+yy
+
+" Paste from clipboard
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
+
+" Elixir auto format
+autocmd BufWritePost *.exs silent :!mix format %
+autocmd BufWritePost *.ex silent :!mix format %
