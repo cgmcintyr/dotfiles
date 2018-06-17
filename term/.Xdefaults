@@ -66,26 +66,26 @@ XTerm.ttyModes: erase ^?
 XTerm.vt100.scrollBar: false
 
 !-[Forest]------------
-*.background:       #170F0D
-*.foreground:       #746C48
-*.cursorColor:      #6666CC
-*.colorBD:          #C8B984
-*.color0:           #392925
-*.color8:           #544B2E
-*.color1:           #98724C
-*.color9:           #AF652F
-*.color2:           #908F32
-*.color10:          #C3C13D
-*.color3:           #AA964C
-*.color11:          #C8B55B
-*.color4:           #7B854E
-*.color12:          #70A16C
-*.color5:           #6B5644
-*.color13:          #98724C
-*.color6:           #5C5142
-*.color14:          #778725
-*.color7:           #C8B55B
-*.color15:          #E4DC8C
+!*.background:       #170F0D
+!*.foreground:       #746C48
+!*.cursorColor:      #6666CC
+!*.colorBD:          #C8B984
+!*.color0:           #392925
+!*.color8:           #544B2E
+!*.color1:           #98724C
+!*.color9:           #AF652F
+!*.color2:           #908F32
+!*.color10:          #C3C13D
+!*.color3:           #AA964C
+!*.color11:          #C8B55B
+!*.color4:           #7B854E
+!*.color12:          #70A16C
+!*.color5:           #6B5644
+!*.color13:          #98724C
+!*.color6:           #5C5142
+!*.color14:          #778725
+!*.color7:           #C8B55B
+!*.color15:          #E4DC8C
 
 !-[Woodland]-----------
 !*background:   #fcfdea
@@ -108,3 +108,45 @@ XTerm.vt100.scrollBar: false
 !*color14: #97c282
 !*color7: #b4b779
 !*color15: #d7da9c
+
+!-[Beard]--------------
+!*.foreground:   #daba8b
+!*.background:   #191716
+!*.cursorColor:  #daba8b
+!*.color0:       #0f0e0d
+!*.color8:       #383332
+!*.color1:       #845336
+!*.color9:       #8c4f4a
+!*.color2:       #57553c
+!*.color10:      #898471
+!*.color3:       #a17e3e
+!*.color11:      #c8b491
+!*.color4:       #43454f
+!*.color12:      #65788f
+!*.color5:       #604848
+!*.color13:      #755e4a
+!*.color6:       #5c6652
+!*.color14:      #718062
+!*.color7:       #a18b62
+!*.color15:      #bc9d66
+
+!-[s3r0]---------------
+*.foreground:   #daba8b
+*.background:   #191716
+*.cursorColor:  #daba8b
+*.color0:       #0f0e0d
+*.color8:       #383332
+*.color1:       #8c4f4a
+*.color9:       #8c4f4a
+*.color2:       #858159
+*.color10:      #898471
+*.color3:       #c99c4c
+*.color11:      #c8b491
+*.color4:       #66697b
+*.color12:      #65788f
+*.color5:       #805f5f
+*.color13:      #b5906f
+*.color6:       #869677
+*.color14:      #8a9d77
+*.color7:       #bba170
+*.color15:      #d7b272

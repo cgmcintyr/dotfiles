@@ -29,6 +29,13 @@ Plug 'posva/vim-vue'
 " Latex
 Plug 'lervag/vimtex'
 
+" Javascript
+Plug 'pangloss/vim-javascript'
+Plug 'posva/vim-vue'
+
+" Elm
+Plug 'ElmCast/elm-vim'
+
 call plug#end()
 filetype plugin indent on
 
@@ -57,13 +64,17 @@ let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let g:vimtex_view_general_options_latexmk = '--unique'
 
+
 "============================General Settings================================"
 
 " Colors
 syntax on
 hi Visual ctermbg=7 ctermfg=0
 hi Pmenu ctermfg=7 ctermbg=4
-hi SpecialKey ctermfg=66 guifg=#649A9A
+hi SpecialKey ctermfg=66
+
+hi clear SpellBad
+hi SpellBad cterm=underline ctermbg=7 ctermfg=0
 
 " UI
 set nu
@@ -71,7 +82,7 @@ set list!
 if has('gui_running')
     set listchars=tab:▶\ ,trail:·,extends:\#,nbsp:.
 else
-    set listchars=tab:>.,trail:.,extends:\#,nbsp:.
+    set listchars=tab:>.,trail:·,extends:\#,nbsp:.
 endif
 
 " Python
@@ -167,3 +178,7 @@ vnoremap <leader>P "+P
 " Elixir auto format
 autocmd BufWritePost *.exs silent :!mix format %
 autocmd BufWritePost *.ex silent :!mix format %
+
+" Spell check
+imap <Leader>s <C-o>:setlocal spell spelllang=en_gb<CR>
+nmap <Leader>s :setlocal spell spelllang=en_gb<CR>

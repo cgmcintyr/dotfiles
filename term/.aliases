@@ -29,3 +29,6 @@ alias jab="java -jar ~/.local/share/jabref/JabRef-4.0.jar >/dev/null 2>&1 &"
 
 # Dissertation
 alias words="find ./chapters -iname \"*.tex\" -type f -exec detex -n {} \; | wc"
+
+# Elm
+alias elm='docker run -it --rm -v "$(pwd):/code" -w "/code" -e "HOME=/tmp" -p 8000:8000 codesimple/elm:0.18'
