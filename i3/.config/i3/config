@@ -1,0 +1,157 @@
+## i3 ModKeys
+set $mod  Mod4
+set $cmod Mod1
+
+## Font for window titles.
+font pango: DejaVu Sans 10
+
+## Colors
+set $back               #1d1F21
+set $black              #282A2E
+set $grey               #373B41
+set $lightgrey          #707880
+set $white              #C5C8C6
+set $yellow             #F0C674
+set $red                #CC6666
+set $darkred            #A54242
+set $green              #B5BD56
+set $default            #18FFD2
+
+# border colors:        border: bg:     text:   indicator:
+#client.focused         #493757 #453452 #FFFFFF #523445
+client.focused          #f1fa8c #394042 #FFFFFF #009688
+client.focused_inactive #4F4E43 #49483E #BFBFBF #49483E
+client.unfocused        #000000 #000000 #888888 #000000
+client.urgent           #662B32 #58252B #F4BF75 #58252B
+
+## Gaps
+#gaps inner 10
+#gaps outer 10
+#smart_gaps on
+
+## Startup applications
+# exec_always feh --bg-scale feh --bg-scale ~/Pictures/low-poly-wallpaper-1.jpg
+# exec_always compton --config ~/.config/compton/config -cb
+exec_always --no-startup-id yabar
+
+## i3 Options
+hide_edge_borders both
+new_window pixel 2
+
+## Sound keys
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 5%+ unmute
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 5%- unmute
+bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo toggle
+
+## Media Keys
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+
+## Brightness Keys
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
+
+## Screenshots
+bindsym Print exec --no-startup-id scrot
+bindsym $mod+Print exec --no-startup-id scrot -s
+
+## Key bindings
+##
+# Open Rofi
+# bindsym $mod+p exec --no-startup-id rofi -show run -lines 3 -eh 2 -width 50 -padding 50 -opacity "100" -bw 2 -bc "#f1fa8c" -bg "#44475a" -fg "#8BE9FD" -hlbg "#44475a" -hlfg "#FF7AC6" -font "Inconsolata for Powerline 26"
+
+# Floating mode
+floating_modifier $mod
+
+# Focus keys
+bindsym $mod+Left  focus left
+bindsym $mod+Down  focus down
+bindsym $mod+Up    focus up
+bindsym $mod+Right focus right
+
+# Moving keys
+bindsym $mod+Shift+Left  move left
+bindsym $mod+Shift+Down  move down
+bindsym $mod+Shift+Up    move up
+bindsym $mod+Shift+Right move right
+
+# Horizontal splitting
+bindsym $mod+h split h
+# Vertical splitting
+bindsym $mod+v split v
+
+# Fullscreen mode
+bindsym $mod+f fullscreen toggle
+
+# Change layout mode
+bindsym $mod+i layout stacking
+bindsym $mod+o layout tabbed
+bindsym $mod+p layout toggle split
+
+# Tiling / floating
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space       focus mode_toggle
+
+# General
+bindsym $mod+a       focus parent
+bindsym $mod+Shift+q kill
+
+# Application Shorcuts
+bindsym $mod+Return  exec --no-startup-id urxvt
+bindsym $mod+w  exec firefox
+bindsym $mod+Shift+w  exec chromium-browser
+
+
+## Workspaces
+
+set $w1 "term"
+set $w2 "www"
+set $w3 "3"
+set $w4 "4"
+set $w5 "5"
+#set $w6 "6:"
+#set $w7 "7:"
+#set $w8 "8:"
+#set $w9 "9:"
+#set $w10 "10:"
+
+# Switch to workspace
+bindsym $mod+1 workspace $w1
+bindsym $mod+2 workspace $w2
+bindsym $mod+3 workspace $w3
+bindsym $mod+4 workspace $w4
+bindsym $mod+5 workspace $w5
+
+# Move focused container to workspace
+bindsym $mod+F1 move container to workspace $w1
+bindsym $mod+F2 move container to workspace $w2
+bindsym $mod+F3 move container to workspace $w3
+bindsym $mod+F4 move container to workspace $w4
+bindsym $mod+F5 move container to workspace $w5
+
+
+## i3 Session Keys
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+r mode "resize"
+
+
+## Resize mode
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym Left  resize shrink width  10 px or 10 ppt
+        bindsym Down  resize grow   height 10 px or 10 ppt
+        bindsym Up    resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow   width  10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
