@@ -47,7 +47,7 @@ function prompt_minimal_setup {
   _newline=$'\n'
   local _lineup=$'\e[1A'
   local _linedown=$'\e[1B'
-  local rprompt='%F{gray}[%D{%H:%M}%f%F{black}%D{ %S}%f%F{gray}]%f'
+  local rprompt='%F{gray}[%D{%H:%M:%S}]%f'
 
   PROMPT='%~${vcs_info_msg_0_}${_newline}%B%F{green}τ%f%b '
   RPROMPT=%{${_lineup}%}"${rprompt}"%{${_linedown}%}
