@@ -50,6 +50,17 @@ if [ -d "$HOME/.cabal/bin" ] ; then
     export PATH="$PATH:$HOME/.cabal/bin"
 fi
 
+# Add conda to PATH
+if [ -d "$HOME/.local/anaconda3/bin" ] ; then
+    export PATH="$PATH:$HOME/.local/anaconda3/bin"
+fi
+
+# Add cargo to PATH
+if [ -d "$HOME/.cargo/bin" ] ; then
+    export PATH="$PATH:$HOME/.cargo/bin"
+fi
+
+
 # Add RVM to PATH for scripting
 if [ -d "$HOME/bin" ] ; then
     export PATH="$PATH:$HOME/.rvm/bin"

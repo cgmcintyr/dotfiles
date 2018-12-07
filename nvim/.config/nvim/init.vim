@@ -10,12 +10,18 @@ call plug#begin('~/.vim/plugged')
 Plug 'slashmili/alchemist.vim'
 Plug 'elixir-editors/vim-elixir'
 
+" Go
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 " File system navigation
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 
 " Auto completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+" Visual * search
+Plug 'nelstrom/vim-visual-star-search'
 
 " Python
 Plug 'zchee/deoplete-jedi'
@@ -35,6 +41,13 @@ Plug 'posva/vim-vue'
 
 " Elm
 Plug 'ElmCast/elm-vim'
+
+" Colorschemes
+Plug 'flazz/vim-colorschemes'
+Plug 'felixhummel/setcolors.vim'
+
+" YANG
+Plug 'nathanalderson/yang.vim'
 
 call plug#end()
 filetype plugin indent on
@@ -60,9 +73,13 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 let g:deoplete#sources#jedi#python_path = $HOME.'/.virtualenvs/NVIM3/bin/python3'
 
 " Vimtex
-let g:vimtex_view_general_viewer = 'okular'
-let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
-let g:vimtex_view_general_options_latexmk = '--unique'
+"let g:vimtex_view_general_viewer = 'evince'
+"let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+"let g:vimtex_view_general_options_latexmk = '--unique'
+let g:deoplete#omni#input_patterns.tex = g:vimtex#re#deoplete
+
+"ELM-VIM
+let g:elm_format_autosave = 1
 
 
 "============================General Settings================================"
@@ -72,7 +89,9 @@ syntax on
 hi Visual ctermbg=7 ctermfg=0
 hi Pmenu ctermfg=7 ctermbg=4
 hi SpecialKey ctermfg=66
+colorscheme wombat256
 
+" Spelling highlights
 hi clear SpellBad
 hi SpellBad cterm=underline ctermbg=7 ctermfg=0
 
@@ -182,3 +201,10 @@ autocmd BufWritePost *.ex silent :!mix format %
 " Spell check
 imap <Leader>s <C-o>:setlocal spell spelllang=en_gb<CR>
 nmap <Leader>s :setlocal spell spelllang=en_gb<CR>
+
+" Column up and down
+nnoremap cd /\%<C-R>=virtcol(".")<CR>v\S<CR>
+nnoremap cu ?\%<C-R>=virtcol(".")<CR>v\S<CR>
+
+" Visual select search
+vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
