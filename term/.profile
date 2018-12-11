@@ -23,6 +23,12 @@ then
   dunst &
 fi
 
+# Ensure albert is running
+if ! pgrep -x "albert" > /dev/null
+then
+  albert &
+fi
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists

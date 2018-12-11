@@ -94,7 +94,7 @@ set folder_format="%2C %t %N %8s %d %f"
 
 ## Mailing Lists ##
 # these mailing lists are known by mutt
-#subscribe <mailing-list>
+subscribe quantum-internet-hackathon@ripe.net
 
 #############
 ## Privacy ##
