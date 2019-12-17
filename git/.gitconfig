@@ -1,8 +1,13 @@
 [user]
     name = Christopher McIntyre
-    email = me@cgmcintyre.com
+    email = c.mcintyre@ocado.com
 [core]
     editor = nvim
     whitespace = fix, -indent-with-non-tab, trailing-space
 [alias]
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f

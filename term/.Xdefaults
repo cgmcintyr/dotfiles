@@ -150,3 +150,5 @@ XTerm.vt100.scrollBar: false
 *.color14:      #8a9d77
 *.color7:       #bba170
 *.color15:      #d7b272
+
+Xcursor.theme: breeze_cursors

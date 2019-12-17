@@ -17,6 +17,10 @@ bindkey '^R' history-incremental-pattern-search-backward
 
 # Fzf
 source $ZDOTDIR/.fzf
+source /home/cgm/.aliases
+
+# ShonenJump
+source $ZDOTDIR/.shonenjump.zsh
 
 # Language environment
 export LANG=en_GB.UTF-8
@@ -28,8 +32,10 @@ export LANG=en_GB.UTF-8
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vi'
+   export VISUAL='vi'
 else
    export EDITOR='nvim'
+   export VISUAL='nvim'
 fi
 
 # Python virtualenvwrapper
@@ -37,3 +43,16 @@ fi
 export WORKON_HOME="$HOME/.virtualenvs"
 VENV="$(which virtualenvwrapper.sh)"
 [[ ! -z $VENV ]] && source $VENV
+
+# GO
+if [ -d "$HOME/devel/go" ]; then
+	export GOPATH="$HOME/devel/go"
+	export GOROOT="$(asdf where golang $(asdf current golang))/go"
+else
+	mkdir "$HOME/devel/go"
+	export GOPATH="$HOME/devel/go"
+	export GOROOT="$(asdf where golang $(asdf current golang))/go"
+fi
+
+# Teg
+. ~/.local/teg-complete.sh

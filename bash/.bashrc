@@ -126,3 +126,5 @@ VENV="$(which virtualenvwrapper.sh)"
 # Export GPG tty
 GPG_TTY=$(tty)
 export GPG_TTY
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -32,7 +32,7 @@ client.urgent           #662B32 #58252B #F4BF75 #58252B
 ## Startup applications
 # exec_always feh --bg-scale feh --bg-scale ~/Pictures/low-poly-wallpaper-1.jpg
 # exec_always compton --config ~/.config/compton/config -cb
-exec_always --no-startup-id yabar
+# exec_always --no-startup-id yabar
 
 ## i3 Options
 hide_edge_borders both
@@ -98,9 +98,9 @@ bindsym $mod+a       focus parent
 bindsym $mod+Shift+q kill
 
 # Application Shorcuts
-bindsym $mod+Return  exec --no-startup-id urxvt
-bindsym $mod+w  exec firefox
-bindsym $mod+Shift+w  exec chromium-browser
+bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+w exec chromium-browser
+bindsym $mod+Shift+w exec firefox
 
 
 ## Workspaces

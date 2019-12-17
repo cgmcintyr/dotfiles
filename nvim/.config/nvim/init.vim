@@ -1,210 +1,233 @@
-" NOT COMPATIBLE TO LEGACY VI VERSIONS
-set nocompatible
+" == Helper Functions ============================================== "
 
-"==============================Plugin List==================================="
-
-filetype off
-call plug#begin('~/.vim/plugged')
-
-" Elixir
-Plug 'slashmili/alchemist.vim'
-Plug 'elixir-editors/vim-elixir'
-
-" Go
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
-" File system navigation
-Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
-
-" Auto completion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
-" Visual * search
-Plug 'nelstrom/vim-visual-star-search'
-
-" Python
-Plug 'zchee/deoplete-jedi'
-
-" Ansible support
-Plug 'chase/vim-ansible-yaml'
-
-" Vue.js syntax
-Plug 'posva/vim-vue'
-
-" Latex
-Plug 'lervag/vimtex'
-
-" Javascript
-Plug 'pangloss/vim-javascript'
-Plug 'posva/vim-vue'
-
-" Elm
-Plug 'ElmCast/elm-vim'
-
-" Colorschemes
-Plug 'flazz/vim-colorschemes'
-Plug 'felixhummel/setcolors.vim'
-
-" YANG
-Plug 'nathanalderson/yang.vim'
-
-call plug#end()
-filetype plugin indent on
-
-"=============================Plugin Settings================================"
-
-"THE-NERD-TREE
-let g:nerdtree_tabs_open_on_console_startup = 0
-let g:nerdtree_tabs_autoclose = 1
-let g:NERDTreeDirArrows = 0
-map <C-u> :NERDTreeTabsToggle<CR>
-
-"DEOPLETE
-let g:deoplete#enable_at_startup = 1
-if !exists('g:deoplete#omni#input_patterns')
-  let g:deoplete#omni#input_patterns = {}
-endif
-let g:deoplete#disable_auto_complete = 0
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-
-"DEOPLETE-JEDI
-let g:deoplete#sources#jedi#python_path = $HOME.'/.virtualenvs/NVIM3/bin/python3'
-
-" Vimtex
-"let g:vimtex_view_general_viewer = 'evince'
-"let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
-"let g:vimtex_view_general_options_latexmk = '--unique'
-let g:deoplete#omni#input_patterns.tex = g:vimtex#re#deoplete
-
-"ELM-VIM
-let g:elm_format_autosave = 1
+function! _PlugLoaded(name)
+	"""Return 1 if name is an installed plugin else 0"""
+	return (
+				\ has_key(g:plugs, a:name) &&
+				\ isdirectory(g:plugs[a:name].dir) &&
+				\ stridx(&rtp, g:plugs[a:name].dir) >= 0)
+endfunction
 
 
-"============================General Settings================================"
+function TabToggle()
+	"""Toggle between tab and space indentation"""
+	if &expandtab
+		set shiftwidth=8
+		set softtabstop=0
+		set noexpandtab
+	else
+		set shiftwidth=4
+		set softtabstop=4
+		set expandtab
+	endif
+endfunction
 
-" Colors
-syntax on
-hi Visual ctermbg=7 ctermfg=0
-hi Pmenu ctermfg=7 ctermbg=4
-hi SpecialKey ctermfg=66
-colorscheme wombat256
 
-" Spelling highlights
-hi clear SpellBad
-hi SpellBad cterm=underline ctermbg=7 ctermfg=0
+function! NextClosedFold(dir)
+	let cmd = 'norm!z' . a:dir
+	let view = winsaveview()
+	let [l0, l, open] = [0, view.lnum, 1]
+	while l != l0 && open
+		exe cmd
+		let [l0, l] = [l, line('.')]
+		let open = foldclosed(l) < 0
+	endwhile
+	if open
+		call winrestview(view)
+	endif
+endfunction
 
-" UI
-set nu
-set list!
-if has('gui_running')
-    set listchars=tab:▶\ ,trail:·,extends:\#,nbsp:.
-else
-    set listchars=tab:>.,trail:·,extends:\#,nbsp:.
-endif
 
-" Python
-let g:python_host_prog = $HOME.'/.virtualenvs/NVIM/bin/python2'
-let g:python3_host_prog = $HOME.'/.virtualenvs/NVIM3/bin/python3'
+" == Setup Functions =============================================== "
 
-" Default encoding
-set enc=utf-8
+function! SetupLanguageClient()
+	if _PlugLoaded('LanguageClient-neovim')
+		let g:LanguageClient_serverCommands = {
+			\ 'python': ['pyls'],
+			\ 'rust': ['rls'],
+			\ 'go': ['~/devel/go/bin/go-langserver'],
+			\ 'c': ['cquery', '--log-file=/tmp/cq.log']}
+		let g:LanguageClient_loadSettings = 1 " Use an absolute configuration path if you want system-wide settings
+		let g:LanguageClient_settingsPath = '~/.config/nvim/settings.json'
+		set completefunc=LanguageClient#complete
+		set formatexpr=LanguageClient_textDocument_rangeFormatting()
+		nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+	endif
+endfunction
 
-" Font
-if has('gui_running')
-    if has('gui_gtk2')
-        set guifont=Inconsolata
-    elseif has ('gui_macvim')
-        set guifont=Menlo
-    elseif has('gui_win32')
-        set guifont=Consolas
+function! SetupMarkdownPreview()
+	if _PlugLoaded('markdown-preview.nvim')
+		" example
+		nmap <C-s> <Plug>MarkdownPreview
+		nmap <M-s> <Plug>MarkdownPreviewStop
+		nmap <C-p> <Plug>MarkdownPreviewToggle
+	endif
+endfunction
+
+
+function! SetupCompletions()
+	if _PlugLoaded('ncm2') == 0
+		return 0
+	endif
+	augroup ncm2
+		autocmd!
+		autocmd BufEnter * call ncm2#enable_for_buffer()
+	augroup END
+	set completeopt=noinsert,menuone,noselect
+	set shortmess+=c
+	let g:ncm2#complete_length = 1
+endfunction
+
+
+function! SetupColorScheme()
+	if _PlugLoaded('vim-colorschemes')
+		colorscheme 1989
+	endif
+	" Enable syntax highlighting
+	syntax on
+	" Monochrome visual highlights
+	hi Visual ctermbg=7 ctermfg=0
+	" Popupmenu colors
+	hi Pmenu ctermfg=7 ctermbg=0
+	" Whitespace
+	hi NonText cterm=NONE ctermfg=242
+endfunction
+
+
+fun SetupFolding()
+	set foldlevel=1
+	set foldlevelstart=1
+	set foldnestmax=3
+	set foldmethod=syntax
+	nnoremap <silent> <leader>zj :call NextClosedFold('j')<cr>
+	nnoremap <silent> <leader>zk :call NextClosedFold('k')<cr>
+	augroup foldingbyfiletype
+		autocmd!
+		autocmd FileType elixir setlocal foldlevel=0 foldlevelstart=0 foldnestmax=1
+		autocmd FileType python setlocal foldlevel=0 foldlevelstart=0 foldnestmax=10
+		autocmd FileType go setlocal foldlevel=1 foldlevelstart=1 foldnestmax=2
+	augroup END
+	if _PlugLoaded('SimpylFold')
+		let g:SimpylFold_docstring_preview = 1
+	endif
+endf
+
+
+fun SetupLatex()
+    if _PlugLoaded('vimtex')
+        autocmd BufReadPre *.tex let b:vimtex_main = 'main.tex'
     endif
-endif
+endf
 
-" Keystroke timeout
-set timeoutlen=200
-au InsertEnter * set timeoutlen=90
-au InsertLeave * set timeoutlen=200
 
-" Indentations to fallback
-set expandtab
-set smarttab
-set smartindent
-set shiftwidth=4
-set tabstop=4
+function! SetupStandardDisplay()
+	" Show line numbers
+	set number
+	" Wrap lines
+	set wrap
+	" Visible whitespace
+	set listchars=tab:>.,trail:·,extends:\#,nbsp:.
+	set list
+endfunction
 
-" Search behaviour
-set hlsearch
-set incsearch
-set magic
 
-" Don't have to press shift when typing commands
-map ; :
+function! RegisterVimrcMappings()
+	nnoremap <silent> <leader>R :source ~/.config/nvim/init.vim <cr>
+	nnoremap <silent> <leader>E :edit ~/.config/nvim/init.vim <cr>
+endfunction
 
-" Don't make your finger busy
-inoremap jk <ESC>
-vnoremap jk <ESC>
 
-" Split navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+function! RegisterWelcomeMessage()
+	augroup registerwelcomemessage
+		autocmd!
+		autocmd VimEnter * echo "Welcome back, " . $USER
+	augroup END
+endfunction
 
-" Key mappings
-cmap w!! w !sudo tee > /dev/null %
-cabbrev w!! w !sudo tee > /dev/null %
-map <F9> :tabnew<CR>
-map <F10> :tabclose<CR>
-nnoremap <tab> :tabnext<CR>
-nnoremap <S-tab> :tabprevious<CR>
-nnoremap - :vertical res -10<CR>
-nnoremap = :vertical res +10<CR>
-nnoremap <leader>- :res -20<CR>
-nnoremap <leader>= :res +20<CR>
 
-" Reverse selection
-vnoremap ;rv c<C-O>:set revins<CR><C-R>"<Esc>:set norevins<CR>
+function! RegisterPlugins()
+	call plug#begin($HOME . '/.local/share/nvim/plugged/')
+		" Display
+		Plug 'flazz/vim-colorschemes'
+		" Completions
+		Plug 'ncm2/ncm2'
+		Plug 'roxma/nvim-yarp'
+		Plug 'ncm2/ncm2-bufword'
+		Plug 'ncm2/ncm2-path'
+		Plug 'ncm2/ncm2-ultisnips'
+		" LanguageServer Client
+		Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
+		" Meson Build System
+		Plug 'igankevich/mesonic'
+		" Snippets
+		Plug 'SirVer/ultisnips'
+		Plug 'honza/vim-snippets'
+		" Latex
+		Plug 'lervag/vimtex'
+		" Elixir
+		Plug 'elixir-editors/vim-elixir'
+		" Python
+		Plug 'tmhedberg/SimpylFold'
+		" Writing
+		Plug 'reedes/vim-pencil'
+		" Coerce to camelcase
+		Plug 'tpope/vim-abolish'
+		" Golang
+		Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+		" Markdown
+		Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+	call plug#end()
+endfunction
 
-" Lang specific indentations
-au FileType sh setl ts=2 sw=2 sts=2
-au FileType bash setl ts=2 sw=2 sts=2
-au FileType haskell setl sw=2
-au FileType javascript setl ts=2 sw=2 sts=2
-au FileType html setl ts=2 sw=2 sts=2
-au FileType css setl ts=2 sw=2 sts=2
-au FileType scss setl ts=2 sw=2 sts=2
-au FileType sass setl ts=2 sw=2 sts=2
-au FileType less setl ts=2 sw=2 sts=2
+function! SetupGolang()
+	augroup golang
+		" Tabs not spaces
+		au FileType go set noexpandtab
+		au FileType go set shiftwidth=4
+		au FileType go set softtabstop=4
+		au FileType go set tabstop=4
+	augroup END
+endf
 
-" Filetype miscs
-au! BufRead,BufNewFile *.wsgi setfiletype python
-au! BufRead,BufNewFile *.less setfiletype less
 
-" Copy to clipboard
-vnoremap  <leader>y  "+y
-nnoremap  <leader>Y  "+yg_
-nnoremap  <leader>y  "+y
-nnoremap  <leader>yy  "+yy
 
-" Paste from clipboard
-nnoremap <leader>p "+p
-nnoremap <leader>P "+P
-vnoremap <leader>p "+p
-vnoremap <leader>P "+P
+function! Main()
+	call RegisterPlugins()
+	call SetupCompletions()
+	call SetupLanguageClient()
+	call SetupColorScheme()
+	call SetupFolding()
+	call SetupGolang()
+	call SetupMarkdownPreview()
 
-" Elixir auto format
-autocmd BufWritePost *.exs silent :!mix format %
-autocmd BufWritePost *.ex silent :!mix format %
+	call RegisterWelcomeMessage()
+	call RegisterVimrcMappings()
 
-" Spell check
-imap <Leader>s <C-o>:setlocal spell spelllang=en_gb<CR>
-nmap <Leader>s :setlocal spell spelllang=en_gb<CR>
+	call SetupStandardDisplay()
 
-" Column up and down
-nnoremap cd /\%<C-R>=virtcol(".")<CR>v\S<CR>
-nnoremap cu ?\%<C-R>=virtcol(".")<CR>v\S<CR>
+	set shiftwidth=4
+	set softtabstop=4
+	set expandtab
+	nnoremap <F9> mz:execute TabToggle()<CR>'z
 
-" Visual select search
-vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
+	" Visual search
+	vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
+
+	" Tab to expand snippet if pumvisible
+	inoremap <expr> <tab> pumvisible() ? ncm2_ultisnips#expand_or("\<Plug>(ultisnips_expand)", 'm') : "\<tab>"
+	" smap <tab> <Plug>(ultisnips_expand)
+
+	" Press enter key to trigger snippet expansion
+	" The parameters are the same as `:help feedkeys()`
+	let g:UltiSnipsExpandTrigger = "<Plug>(ultisnips_expand)"
+	let g:UltiSnipsJumpForwardTrigger = "<c-j>"
+	let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
+	let g:UltiSnipsRemoveSelectModeMappings = 0
+	let g:UltiSnipsEditSplit="vertical"
+	let g:UltiSnipsSnippetsDir=$HOME."/.config/nvim/UltiSnips"
+
+	let mapleader=","
+	let maplocalleader="\\"
+endfunction
+
+call Main()

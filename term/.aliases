@@ -1,34 +1,81 @@
 # General
+alias gg="exit"
+alias meow="nvim"
 alias n="nvim"
+alias t='[[ -z "$TMUX" ]] && tmux || tig'  # Tmux if not in tmux, else tig
+alias vim="nvim"
 
-# Firefox
-alias ff-trello="firefox -new-tab 'http://www.trello.com'"
-alias ff-mole="firefox -new-tab 'https://vle.shef.ac.uk/webapps/login/'"
-alias ff-amazon-jobs="firefox -new-tab 'https://uk-amazon.icims.com/jobs/login?loginOnly=1'"
+# Disk usage
+alias d="du -h -d1 | sort -hr | head -n 10"  # Directories using most space
 
-# Codethink
-alias ctgit='ssh git@git.codethink.co.uk'
+# Configure
+alias configure_alacritty='$EDITOR $HOME/.config/alacritty/alacritty.yml'
+alias configure_bspwm='$EDITOR $HOME/.config/bspwm/bspwmrc'
+alias configure_dunst='$EDITOR $HOME/.config/dunst/dunstrc'
+alias configure_neovim='$EDITOR $HOME/.config/nvim/init.vim'
+alias configure_nvim='$EDITOR $HOME/.config/nvim/init.vim'
+alias configure_profile='$EDITOR $HOME/.profile'
+alias configure_rofi_theme='$EDITOR $HOME/.config/rofi/theme.rasi'
+alias configure_sxhkd='$EDITOR $HOME/.config/sxhkd/sxhkdrc'
+alias configure_zsh='$EDITOR $ZDOTDIR'
+alias configute_tmux='$EDITOR $HOME/.tmux.conf'
 
-# Grepping
-alias mygrep="grep -inIEr –color=ALWAYS"
+# Git
+alias gb="git branch"
+alias gc="git commit -m"
+alias gco="git checkout"
+alias gd="git diff"
+alias gl="git log --oneline --max-count=10 --graph"
+alias gp="git pull"
+alias gst="git status"
+alias gu="git push"
+alias clean="git clean -xdf"
 
-# Django
-alias djt="python3 manage.py test"
-alias djs="python3 manage.py runserver"
+# Clear the screen of your clutter
+alias c="clear"
+alias cls="clear;ls"
 
-# Vue
-alias vue-init="docker run --rm -ti -v /home/christophermcintyre/devel/vue/brick:/srv -w /srv rflavien/vue-cli:v2 init"
-alias vue-dev="docker run --rm -v $(pwd):/src -w /src -p 8080:8080 node:8.1 bash -c \"npm install && npm run dev\""
-alias vue-production="docker run --rm -v $(pwd):/src -w /src node:8.1 bash -c \"npm install && npm run build\""
+# Flatpak
+alias fp-steam='flatpak run com.valvesoftware.Steam'
+alias fp-ps2='flatpak run net.pcsx2.PCSX2'
+alias fp-discord='flatpak run com.discordapp.Discord'
+alias fp-tor='flatpak run com.github.micahflee.torbrowser-launcher'
 
-# OCI
-alias skocopy-docker="skopeo --debug --insecure-policy copy --src-cert-dir ~/.docker "
+# Functions
 
-# Jabref
-alias jab="java -jar ~/.local/share/jabref/JabRef-4.0.jar >/dev/null 2>&1 &"
+find_and_replace () {
+	find ./ -type f -exec sed -i "s/${1}/${2}/g" {} \;
+}
 
-# Dissertation
-alias words="find ./chapters -iname \"*.tex\" -type f -exec detex -n {} \; | wc"
+start_ssh_agent () {
+	local SSH_ENV="$HOME/.ssh/environment"
+	# Source SSH settings, if applicable
+	if [ -f "${SSH_ENV}" ]; then
+		echo "Found environemnt"
+		. "${SSH_ENV}" > /dev/null
+		#ps ${SSH_AGENT_PID} doesn't work under cywgin
+		ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+			echo "Initialising new SSH agent..."
+			/usr/bin/ssh-agent | sed 's/^echo/#echo/' >! "${SSH_ENV}"
+			echo "Succeeded"
+			chmod 600 "${SSH_ENV}"
+			. "${SSH_ENV}" > /dev/null
+			/usr/bin/ssh-add;
+		}
+	else
+		echo "Initialising new SSH agent..."
+		/usr/bin/ssh-agent | sed 's/^echo/#echo/' >! "${SSH_ENV}"
+		echo "Succeeded"
+		chmod 600 "${SSH_ENV}"
+		. "${SSH_ENV}" > /dev/null
+		/usr/bin/ssh-add;
+	fi
+}
 
-# Elm
-alias elm='docker run -it --rm -v "$(pwd):/code" -w "/code" -e "HOME=/tmp" -p 8000:8000 codesimple/elm:0.18'
+jira () {
+	bash -c 'cd /home/cgm/devel/ocado/autojira && poetry run autojira'
+}
+
+timesheet () {
+	bash -c 'cd /home/cgm/devel/ocado/autotimesheet && node index.js'
+}
