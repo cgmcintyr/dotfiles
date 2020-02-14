@@ -39,19 +39,19 @@ urxvt*matcher.button:        1
 urxvt*matcher.pattern.1:   \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
 
 !-[Fonts]--------------
-#define termfont	xft:DejavuSansMono:medium:pixelsize=14,xft:FontAwesome:antialias=true:pixelsize=12
-#define termfontbold	xft:DejavuSansMono:bold:pixelsize=14,xft:FontAwesome:antialias=true:pixelsize=12
-URxvt.font:           termfont
-URxvt.boldFont:       termfontbold
-URxvt.italicFont:     termfont
-URxvt.boldItalicFont: termfontbold
-URxvt.letterSpace: -1
-
-*.font:           termfont
-*.boldFont:       termfontbold
-*.italicFont:     termfont
-*.boldItalicFont: termfontbold
-*.letterSpace: 0
+!#define termfont	xft:DejavuSansMono:medium:pixelsize=14,xft:FontAwesome:antialias=true:pixelsize=12
+!#define termfontbold	xft:DejavuSansMono:bold:pixelsize=14,xft:FontAwesome:antialias=true:pixelsize=12
+!URxvt.font:           termfont
+!URxvt.boldFont:       termfontbold
+!URxvt.italicFont:     termfont
+!URxvt.boldItalicFont: termfontbold
+!URxvt.letterSpace: -1
+!
+!*.font:           termfont
+!*.boldFont:       termfontbold
+!*.italicFont:     termfont
+!*.boldItalicFont: termfontbold
+!*.letterSpace: 0
 
 !-[Xterm]-------------
 XTerm.termName: xterm-256color
@@ -131,24 +131,63 @@ XTerm.vt100.scrollBar: false
 !*.color15:      #bc9d66
 
 !-[s3r0]---------------
-*.foreground:   #daba8b
-*.background:   #191716
-*.cursorColor:  #daba8b
-*.color0:       #0f0e0d
-*.color8:       #383332
-*.color1:       #8c4f4a
-*.color9:       #8c4f4a
-*.color2:       #858159
-*.color10:      #898471
-*.color3:       #c99c4c
-*.color11:      #c8b491
-*.color4:       #66697b
-*.color12:      #65788f
-*.color5:       #805f5f
-*.color13:      #b5906f
-*.color6:       #869677
-*.color14:      #8a9d77
-*.color7:       #bba170
-*.color15:      #d7b272
+!*.foreground:   #daba8b
+!*.background:   #191716
+!*.cursorColor:  #daba8b
+!*.color0:       #0f0e0d
+!*.color8:       #383332
+!*.color1:       #8c4f4a
+!*.color9:       #8c4f4a
+!*.color2:       #858159
+!*.color10:      #898471
+!*.color3:       #c99c4c
+!*.color11:      #c8b491
+!*.color4:       #66697b
+!*.color12:      #65788f
+!*.color5:       #805f5f
+!*.color13:      #b5906f
+!*.color6:       #869677
+!*.color14:      #8a9d77
+!*.color7:       #bba170
+!*.color15:      #d7b272
 
-Xcursor.theme: breeze_cursors
+!-[grayscale]----------
+! Base16 Grayscale Dark
+! Scheme: Alexandre Gavioli (https://github.com/Alexx2/)
+! ! special
+*.foreground:   #d1d1d1
+*.background:   #2d2d2d
+*.cursorColor:  #d1d1d1
+
+! black
+*.color0:       #101010
+*.color8:       #5e5e5e
+
+! red
+*.color1:       #e56363
+*.color9:       #f77a7a
+
+! green
+*.color2:       #8a87e8
+*.color10:      #8e9de9
+
+! yellow
+*.color3:       #a0a0a0
+*.color11:      #b8b8b8
+
+! blue
+*.color4:       #686868
+*.color12:      #cecece
+
+! magenta
+*.color5:       #747474
+*.color13:      #dedede
+
+! cyan
+*.color6:       #868686
+*.color14:      #f7f7f7
+
+! white
+*.color7:       #b9b9b9
+*.color15:      #fcfcfc
+

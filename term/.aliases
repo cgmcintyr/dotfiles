@@ -5,6 +5,9 @@ alias n="nvim"
 alias t='[[ -z "$TMUX" ]] && tmux || tig'  # Tmux if not in tmux, else tig
 alias vim="nvim"
 
+# Ruby
+alias be="bundle exec"
+
 # Disk usage
 alias d="du -h -d1 | sort -hr | head -n 10"  # Directories using most space
 
