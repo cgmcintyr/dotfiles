@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/home/cgm/devel/ocado/osp-cfc-network/sysadmin/build-management-server/ansible/roles/bgp/tasks'
 let g:netrw_dirhist_2='/home/cgm/devel/ocado/osp-cfc-network/sysadmin/build-management-server/ansible/roles/bgp'
 let g:netrw_dirhist_3='/home/cgm/devel/ocado/osp-cfc-network/sysadmin/build-management-server/ansible/roles/bgp/templates'
 let g:netrw_dirhist_4='/home/cgm/devel/ruby/todoapp/db/migrate'
 let g:netrw_dirhist_5='/home/cgm/devel/ocado/osp-cfc-network/sysadmin/build-management-server/ansible/templates'
 let g:netrw_dirhist_6='/home/cgm/devel/ruby/todoapp/bin'
+let g:netrw_dirhist_7='/secrets/home'

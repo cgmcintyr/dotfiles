@@ -25,6 +25,8 @@ call plug#begin($HOME . '/.local/share/nvim/plugged/')
 	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 	" Markdown
 	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+	" Ruby
+	Plug 'tpope/vim-rails'
 call plug#end()
 
 function! _PlugLoaded(name)
@@ -109,8 +111,11 @@ function! NextClosedFold(dir)
 		call winrestview(view)
 	endif
 endfunction
-nnoremap <silent> <leader>zj :call NextClosedFold('j')<cr>
-nnoremap <silent> <leader>zk :call NextClosedFold('k')<cr>
+
+nnoremap Z <Nop>
+nnoremap ZZ <Nop>
+nnoremap <silent> zz :call NextClosedFold('j')<cr>
+nnoremap <silent> ZZ :call NextClosedFold('k')<cr>
 
 
 " === Language (Latex) ============================================= "
