@@ -1,6 +1,6 @@
 [user]
-    name = Christopher McIntyre
-    email = c.mcintyre@ocado.com
+	name = Christopher G McIntyre
+	email = c.mcintyre@sheffield.ac.uk
 [core]
     editor = nvim
     whitespace = fix, -indent-with-non-tab, trailing-space

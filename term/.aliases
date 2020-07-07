@@ -7,6 +7,10 @@ alias vim="nvim"
 
 # Ruby
 alias be="bundle exec"
+alias irbi="irb -I . -r "
+
+# PHP
+alias fixmyphp="php-cs-fixer fix -v --rules=@PSR1"
 
 # Disk usage
 alias d="du -h -d1 | sort -hr | head -n 10"  # Directories using most space

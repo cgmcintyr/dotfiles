@@ -24,7 +24,6 @@ BACKGROUND_COMMANDS=(
 	"redshift"  # Redlight colour adjustment
 	"sxhkd"  # Simple X Hotkey Daemon
 	"xscreensaver"  # Screensaver server process
-	"fcitx" # Input methods
 )
 
 
@@ -102,7 +101,7 @@ clear_downloads() {
 # Configure pass password manager.
 ##
 setup_pass() {
-	export PASSWORD_STORE_DIR=/media/cgm/ENCRYPTED/.password-store
+	export PASSWORD_STORE_DIR=~/.password-store
 }
 
 
@@ -127,7 +126,10 @@ setup_gpg_agent() {
 # Set wallpaper using feh.
 ##
 setup_wallpaper() {
-	feh  -B "#062542"  --bg-center ~/Pictures/none.png
+	if [ -f "$HOME/Pictures/none.png" ]; then
+		# feh  -B "#222"  --bg-center ~/Pictures/none.png
+		feh  -B "#222"  --bg-center ~/Pictures/void/circuit_green_void_logo_notext.png
+	fi
 }
 
 
@@ -183,11 +185,8 @@ setup_path() {
 	export PATH="$PATH"
 }
 
-
-setup_fcitx() {
-	export GTK_IM_MODULE=fcitx
-	export QT_IM_MODULE=fcitx
-	export XMODIFIERS=@im=fcitx
+setup_go() {
+	GOPATH="$HOME/devel/go"
 }
 
 
@@ -207,7 +206,24 @@ main() {
 
 	# Other
 	clear_downloads
+	setup_go
+
+	# Vagrant
+	export VAGRANT_DEFAULT_PROVIDER="libvirt"
 }
 
+
+# SSH Agent doesn't seem to like being in a function...
+ssh-add -l &>/dev/null
+if [[ "$?" == 2 ]]; then
+	test -r ~/.ssh-agent && eval "$(<~/.ssh-agent)" >/dev/null
+	ssh-add -l &>/dev/null
+	if [ "$?" == 2 ]; then
+		(umask 066; ssh-agent > ~/.ssh-agent)
+		eval "$(<~/.ssh-agent)" >/dev/null
+	fi
+fi
+
+pulseaudio --start
 
 main "$@"

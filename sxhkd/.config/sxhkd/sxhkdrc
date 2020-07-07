@@ -12,7 +12,10 @@ super + space
 
 # Browser
 super + w
-	chromium-browser
+	firefox
+
+super + W
+	chromium
 
 Print
 	scrot '%Y-%m-%d-%H%M%S.png' -e 'mv $f ~/Pictures/screenshots/.'

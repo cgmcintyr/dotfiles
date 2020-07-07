@@ -40,6 +40,7 @@ fi
 
 # Python virtualenvwrapper
 [ ! -d "$HOME/.virtualenvs" ] && mkdir "$HOME/.virtualenvs"
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export WORKON_HOME="$HOME/.virtualenvs"
 VENV="$(which virtualenvwrapper.sh)"
 [[ ! -z $VENV ]] && source $VENV

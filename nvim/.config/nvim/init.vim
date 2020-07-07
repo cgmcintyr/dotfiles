@@ -27,6 +27,9 @@ call plug#begin($HOME . '/.local/share/nvim/plugged/')
 	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 	" Ruby
 	Plug 'tpope/vim-rails'
+	Plug 'tpope/vim-haml'
+	" JS
+	Plug 'pangloss/vim-javascript'
 call plug#end()
 
 function! _PlugLoaded(name)
@@ -44,6 +47,8 @@ endfunction
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+set smarttab
+set cindent
 
 function TabToggle()
 	"""Toggle between tab and space indentation"""
@@ -85,7 +90,7 @@ set signcolumn=auto
 
 set foldlevel=1
 set foldlevelstart=1
-set foldnestmax=3
+set foldnestmax=1
 set foldmethod=syntax
 augroup foldingbyfiletype
         autocmd!
@@ -124,6 +129,8 @@ if _PlugLoaded('vimtex')
     autocmd BufReadPre *.tex let b:vimtex_main = 'main.tex'
 endif
 
+autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 expandtab
+
 
 " === Leader Shortcuts ============================================= "
 
@@ -151,6 +158,7 @@ let g:coc_global_extensions = [ 'coc-solargraph',
                               \ 'coc-json',
                               \ 'coc-html',
                               \ 'coc-snippets',
+                              \ 'coc-python',
                               \ 'coc-css']
 
 " Use tab for trigger completion with characters ahead and navigate.
@@ -265,12 +273,14 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " === Linting/Fixing =============================================== "
 let g:ale_linters = {
-      \   'ruby': ['standardrb', 'rubocop'],
+      \   'ruby': ['rubocop'],
       \   'python': ['flake8', 'pylint'],
-      \   'javascript': ['eslint'],
+      \   'javascript': ['standard'],
       \}
 let g:ale_fixers = {
       \    'ruby': ['rubocop'],
+      \    'javascript': ['standard'],
+      \    'python': ['black'],
       \}
 let g:ale_enabled = 1
 let g:ale_fix_on_save = 1
